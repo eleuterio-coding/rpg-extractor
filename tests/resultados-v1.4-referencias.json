@@ -1,0 +1,93 @@
+{
+  "version": "1.4.0",
+  "commit": "2512db75eb48ef06f6190b086a82430887906dca",
+  "codeBlob": "7f68d2ffc14d267c251438cca723d53b70d0bd6d",
+  "checkedFiles": 9,
+  "records": 557,
+  "unavailable": [
+    {
+      "path": "data/generated/gendata-tables.json",
+      "reason": "SyntaxError: Unexpected end of JSON input"
+    }
+  ],
+  "checks": [
+    {
+      "name": "audit data/items-base.json",
+      "ok": true,
+      "observed": 134
+    },
+    {
+      "name": "audit data/class/class-fighter.json",
+      "ok": true,
+      "observed": 65
+    },
+    {
+      "name": "audit data/class/class-sorcerer.json",
+      "ok": true,
+      "observed": 49
+    },
+    {
+      "name": "audit data/class/class-barbarian.json",
+      "ok": true,
+      "observed": 53
+    },
+    {
+      "name": "audit data/class/class-paladin.json",
+      "ok": true,
+      "observed": 57
+    },
+    {
+      "name": "audit data/class/class-ranger.json",
+      "ok": true,
+      "observed": 53
+    },
+    {
+      "name": "audit data/class/class-rogue.json",
+      "ok": true,
+      "observed": 68
+    },
+    {
+      "name": "audit data/book/book-xphb.json",
+      "ok": true,
+      "observed": 1
+    },
+    {
+      "name": "audit data/feats.json",
+      "ok": true,
+      "observed": 77
+    },
+    {
+      "name": "10 referências de maestria",
+      "ok": true,
+      "observed": {
+        "found": 10,
+        "matched": 10
+      }
+    },
+    {
+      "name": "2 referências Wild Magic Surge",
+      "ok": true,
+      "observed": 2
+    },
+    {
+      "name": "1 referência de perícias",
+      "ok": true,
+      "observed": 1
+    },
+    {
+      "name": "76 fontes implícitas",
+      "ok": false,
+      "observed": {
+        "found": 38,
+        "matched": 38
+      }
+    },
+    {
+      "name": "validação modular",
+      "ok": true,
+      "observed": []
+    }
+  ],
+  "passed": 13,
+  "failed": 1
+}
