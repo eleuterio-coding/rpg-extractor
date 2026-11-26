@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.1/recarga.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "definition": {
+      "type": "object"
+    },
+    "minimum": {
+      "const": 5
+    },
+    "maximum": {
+      "const": 6
+    },
+    "state": {
+      "const": "componente_isolado"
+    },
+    "bloquear_importacao": {
+      "const": true
+    }
+  },
+  "required": [
+    "id",
+    "record",
+    "evidence",
+    "definition",
+    "minimum",
+    "maximum",
+    "state",
+    "bloquear_importacao"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,387 @@
+{
+  "checks": [
+    {
+      "name": "recarga com trechos dos blobs verificados",
+      "ok": true
+    },
+    {
+      "name": "21 casos de recarga",
+      "ok": true
+    },
+    {
+      "name": "sem definição não promove",
+      "ok": true
+    },
+    {
+      "name": "hash errado não promove",
+      "ok": true
+    },
+    {
+      "name": "11 schemas",
+      "ok": true
+    }
+  ],
+  "tests": [
+    {
+      "id": "RC000001",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": true,
+        "event": "inicio_turno",
+        "face": 1
+      },
+      "expected": {
+        "available": true
+      },
+      "actual": {
+        "available": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000002",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": true,
+        "event": "inicio_turno",
+        "face": 2
+      },
+      "expected": {
+        "available": true
+      },
+      "actual": {
+        "available": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000003",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": true,
+        "event": "inicio_turno",
+        "face": 3
+      },
+      "expected": {
+        "available": true
+      },
+      "actual": {
+        "available": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000004",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": true,
+        "event": "inicio_turno",
+        "face": 4
+      },
+      "expected": {
+        "available": true
+      },
+      "actual": {
+        "available": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000005",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": true,
+        "event": "inicio_turno",
+        "face": 5
+      },
+      "expected": {
+        "available": true
+      },
+      "actual": {
+        "available": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000006",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": true,
+        "event": "inicio_turno",
+        "face": 6
+      },
+      "expected": {
+        "available": true
+      },
+      "actual": {
+        "available": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000007",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": false,
+        "event": "inicio_turno",
+        "face": 1
+      },
+      "expected": {
+        "available": false
+      },
+      "actual": {
+        "available": false
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000008",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": false,
+        "event": "inicio_turno",
+        "face": 2
+      },
+      "expected": {
+        "available": false
+      },
+      "actual": {
+        "available": false
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000009",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": false,
+        "event": "inicio_turno",
+        "face": 3
+      },
+      "expected": {
+        "available": false
+      },
+      "actual": {
+        "available": false
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000010",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": false,
+        "event": "inicio_turno",
+        "face": 4
+      },
+      "expected": {
+        "available": false
+      },
+      "actual": {
+        "available": false
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000011",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": false,
+        "event": "inicio_turno",
+        "face": 5
+      },
+      "expected": {
+        "available": true
+      },
+      "actual": {
+        "available": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000012",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": false,
+        "event": "inicio_turno",
+        "face": 6
+      },
+      "expected": {
+        "available": true
+      },
+      "actual": {
+        "available": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000013",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": true,
+        "event": "descanso_curto",
+        "face": null
+      },
+      "expected": {
+        "available": true
+      },
+      "actual": {
+        "available": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000014",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": true,
+        "event": "descanso_longo",
+        "face": null
+      },
+      "expected": {
+        "available": true
+      },
+      "actual": {
+        "available": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000015",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": false,
+        "event": "descanso_curto",
+        "face": null
+      },
+      "expected": {
+        "available": true
+      },
+      "actual": {
+        "available": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000016",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": false,
+        "event": "descanso_longo",
+        "face": null
+      },
+      "expected": {
+        "available": true
+      },
+      "actual": {
+        "available": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000017",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": true,
+        "event": "inicio_turno",
+        "face": 0
+      },
+      "expected": {
+        "error": true
+      },
+      "actual": {
+        "error": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000018",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": false,
+        "event": "inicio_turno",
+        "face": 7
+      },
+      "expected": {
+        "error": true
+      },
+      "actual": {
+        "error": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000019",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": false,
+        "event": "descanso_curto",
+        "face": 5
+      },
+      "expected": {
+        "error": true
+      },
+      "actual": {
+        "error": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000020",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "available": false,
+        "event": "outro",
+        "face": null
+      },
+      "expected": {
+        "error": true
+      },
+      "actual": {
+        "error": true
+      },
+      "passed": true
+    },
+    {
+      "id": "RC000021",
+      "component": "rc:recharge:fixture-recharge-real",
+      "input": {
+        "event": "inicio_turno",
+        "face": 5
+      },
+      "expected": {
+        "error": true
+      },
+      "actual": {
+        "error": true
+      },
+      "passed": true
+    }
+  ],
+  "component": [
+    {
+      "id": "rc:recharge:fixture-recharge-real",
+      "record": "data/bestiary/bestiary-xmm.json#/monster/192",
+      "evidence": {
+        "record": "data/bestiary/bestiary-xmm.json#/monster/192",
+        "path": "data/bestiary/bestiary-xmm.json",
+        "pointer": "/monster/192/action/1/name",
+        "sourceSha": "ce5936008fed6600d64acd5450736551c87099bf",
+        "commit": "2512db75eb48ef06f6190b086a82430887906dca",
+        "source": "XMM"
+      },
+      "definition": {
+        "repo": "5etools-mirror-3/5etools-src",
+        "commit": "2512db75eb48ef06f6190b086a82430887906dca",
+        "path": "data/book/book-xmm.json",
+        "pointer": "/bookData/0/data/0/entries/6/entries/26/entries/1/items/1",
+        "sourceSha": "a21801793df3515d07ef9a56d9febefea1c6f8f7"
+      },
+      "minimum": 5,
+      "maximum": 6,
+      "state": "componente_isolado",
+      "bloquear_importacao": true
+    }
+  ],
+  "limits": "Trechos exatos dos dois blobs verificados em Python a partir do ZIP 1.3; não é a extração integral via conector."
+}
