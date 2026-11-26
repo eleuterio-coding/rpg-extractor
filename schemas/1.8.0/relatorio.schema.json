@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.8.0/relatorio.schema.json",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": "1.8.0"
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "adapter": {
+          "enum": [
+            "dnd5e-5etools",
+            "pf2e-foundry"
+          ]
+        },
+        "system": {
+          "enum": [
+            "dnd5e",
+            "pf2e"
+          ]
+        },
+        "edition": {
+          "enum": [
+            "5e-2024-revisada",
+            "remaster",
+            "legacy",
+            "nao_confirmada"
+          ]
+        },
+        "publication": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "adapter",
+        "system",
+        "edition",
+        "publication"
+      ],
+      "additionalProperties": false
+    },
+    "records": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000000
+    },
+    "components": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000000
+    },
+    "tests": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10000000
+        },
+        "passed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10000000
+        },
+        "failed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10000000
+        }
+      },
+      "required": [
+        "total",
+        "passed",
+        "failed"
+      ],
+      "additionalProperties": false
+    },
+    "pending": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "status": {
+      "enum": [
+        "aprovado_no_escopo_testado",
+        "bloqueado"
+      ]
+    },
+    "bloquear_importacao": {
+      "const": true
+    },
+    "homologacao": {
+      "const": "bloqueada"
+    },
+    "limits": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "version",
+    "scope",
+    "records",
+    "components",
+    "tests",
+    "pending",
+    "status",
+    "bloquear_importacao",
+    "homologacao",
+    "limits"
+  ],
+  "additionalProperties": false
+}

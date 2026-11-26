@@ -1,0 +1,182 @@
+{
+  "version": "1.8.0",
+  "checks": [
+    {
+      "name": "6 registros PF2e Remaster Player Core",
+      "ok": true
+    },
+    {
+      "name": "3 componentes PF2e",
+      "ok": true
+    },
+    {
+      "name": "casos PF2e aprovados",
+      "ok": true
+    },
+    {
+      "name": "legacy segregado consultivo",
+      "ok": true
+    },
+    {
+      "name": "outra publicação segregada",
+      "ok": true
+    },
+    {
+      "name": "regras nativas não executadas",
+      "ok": true
+    },
+    {
+      "name": "reações e ações livres pendentes",
+      "ok": true
+    },
+    {
+      "name": "originais preservados",
+      "ok": true
+    },
+    {
+      "name": "dez fórmulas reais Força",
+      "ok": true
+    },
+    {
+      "name": "80 testes Força",
+      "ok": true
+    },
+    {
+      "name": "edição desconhecida não inferida",
+      "ok": true
+    },
+    {
+      "name": "autotestes v1.7",
+      "ok": true
+    },
+    {
+      "name": "regressão dirigida 1.4–1.7",
+      "ok": true
+    },
+    {
+      "name": "namespaces distintos",
+      "ok": true
+    }
+  ],
+  "pfSource": {
+    "repo": "foundryvtt/pf2e",
+    "commit": "edd853bd51a735e60477ab9b56536e1b233dd804",
+    "tree": "cb14e42130b2eba32cfe75d260bb3f205afd6cca",
+    "files": [
+      {
+        "path": "packs/pf2e/actions/basic/stride.json",
+        "sha": "4366e879c805d6666d8a75dbab325bbadbbafab6"
+      },
+      {
+        "path": "packs/pf2e/actions/basic/aid.json",
+        "sha": "1de41baf52c53dbe8143cc2296dfdaaae0c16239"
+      },
+      {
+        "path": "packs/pf2e/actions/basic/release.json",
+        "sha": "ef8ab4b9e2b809035108330ab2bb0f333e950c15"
+      },
+      {
+        "path": "packs/pf2e/actions/basic/raise-a-shield.json",
+        "sha": "66368c28fdef2eba59680e6ccbaaae0c5e011333"
+      },
+      {
+        "path": "packs/pf2e/actions/basic/affix-a-fulu.json",
+        "sha": "ecb91c2126fc1c35b522e05114278ab40fd59879"
+      },
+      {
+        "path": "packs/pf2e/conditions/frightened.json",
+        "sha": "118d6590db1d7771596977cf6ff1497cd1843ffa"
+      },
+      {
+        "path": "packs/pf2e/spells/spells/rank-1/force-barrage.json",
+        "sha": "c92171de982d94a73361f42b3cf5a15426b37258"
+      },
+      {
+        "path": "packs/pf2e/pathfinder-bestiary/air-mephit.json",
+        "sha": "93dc7e5d597dcdce8fc7c2a5109ddbf4373b7e5d"
+      }
+    ]
+  },
+  "pfReport": {
+    "version": "1.8.0",
+    "scope": {
+      "adapter": "pf2e-foundry",
+      "system": "pf2e",
+      "edition": "remaster",
+      "publication": "Pathfinder Player Core"
+    },
+    "records": 6,
+    "components": 3,
+    "tests": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "pending": 10,
+    "status": "aprovado_no_escopo_testado",
+    "bloquear_importacao": true,
+    "homologacao": "bloqueada",
+    "limits": [
+      "Foundry PF2e em commit fixado; edição e publicação por metadado explícito.",
+      "Custo fixo de ações e fórmulas simples são componentes, não regras completas.",
+      "RuleElements não executados."
+    ]
+  },
+  "legacyReport": {
+    "version": "1.8.0",
+    "scope": {
+      "adapter": "pf2e-foundry",
+      "system": "pf2e",
+      "edition": "legacy",
+      "publication": "Pathfinder Bestiary"
+    },
+    "records": 1,
+    "components": 0,
+    "tests": {
+      "total": 0,
+      "passed": 0,
+      "failed": 0
+    },
+    "pending": 2,
+    "status": "bloqueado",
+    "bloquear_importacao": true,
+    "homologacao": "bloqueada",
+    "limits": [
+      "Foundry PF2e em commit fixado; edição e publicação por metadado explícito.",
+      "Custo fixo de ações e fórmulas simples são componentes, não regras completas.",
+      "RuleElements não executados."
+    ]
+  },
+  "dndSource": {
+    "repo": "5etools-mirror-3/5etools-src",
+    "commit": "2512db75eb48ef06f6190b086a82430887906dca",
+    "code": "XPHB",
+    "scope": "data/"
+  },
+  "dndReport": {
+    "version": "1.8.0",
+    "scope": {
+      "adapter": "dnd5e-5etools",
+      "system": "dnd5e",
+      "edition": "5e-2024-revisada",
+      "publication": "XPHB"
+    },
+    "records": 115,
+    "components": 10,
+    "tests": {
+      "total": 80,
+      "passed": 80,
+      "failed": 0
+    },
+    "pending": 83,
+    "status": "aprovado_no_escopo_testado",
+    "bloquear_importacao": true,
+    "homologacao": "bloqueada",
+    "limits": [
+      "Núcleo e testes 1.7 preservados; extensão separada.",
+      "Edições desconhecidas não habilitam extensão.",
+      "Sem homologação de regras integrais."
+    ]
+  },
+  "limits": "Testes dirigidos sobre oito arquivos PF2e e um XPHB obtidos do GitHub, sem execução integral no navegador."
+}

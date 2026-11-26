@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.8.0/caso.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "componentId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input": {
+      "type": "object",
+      "properties": {
+        "scope": {
+          "type": "object",
+          "properties": {
+            "adapter": {
+              "enum": [
+                "dnd5e-5etools",
+                "pf2e-foundry"
+              ]
+            },
+            "system": {
+              "enum": [
+                "dnd5e",
+                "pf2e"
+              ]
+            },
+            "edition": {
+              "enum": [
+                "5e-2024-revisada",
+                "remaster",
+                "legacy",
+                "nao_confirmada"
+              ]
+            },
+            "publication": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "adapter",
+            "system",
+            "edition",
+            "publication"
+          ],
+          "additionalProperties": false
+        },
+        "values": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "scope",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "expected": {},
+    "actual": {},
+    "status": {
+      "enum": [
+        "aprovado",
+        "reprovado"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "componentId",
+    "input",
+    "expected",
+    "actual",
+    "status"
+  ],
+  "additionalProperties": false
+}

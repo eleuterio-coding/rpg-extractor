@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.8.0/saida.schema.json",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "enum": [
+        "multiplicador_forca",
+        "custo_acao_pf2e",
+        "dados_fixos_pf2e"
+      ]
+    },
+    "value": {
+      "type": "number"
+    },
+    "rollsConsumed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "bloquear_importacao": {
+      "const": true
+    }
+  },
+  "required": [
+    "kind",
+    "value",
+    "rollsConsumed",
+    "bloquear_importacao"
+  ],
+  "additionalProperties": false
+}
