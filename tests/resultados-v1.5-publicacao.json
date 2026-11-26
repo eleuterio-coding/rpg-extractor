@@ -1,0 +1,107 @@
+{
+  "release": "61935ba027d420a8377a80fcb35d16f045d9843d",
+  "codeBlob": "4b1025902219416e9500862a2bf720f0dcf2a51e",
+  "source": {
+    "repo": "5etools-mirror-3/5etools-src",
+    "commit": "2512db75eb48ef06f6190b086a82430887906dca",
+    "code": "XPHB"
+  },
+  "realFiles": [
+    "data/items-base.json",
+    "data/book/book-xphb.json",
+    "data/class/class-fighter.json",
+    "data/bestiary/bestiary-xphb.json",
+    "data/variantrules.json"
+  ],
+  "records": 330,
+  "checks": [
+    {
+      "name": "main e commit publicados idênticos",
+      "ok": true,
+      "observed": "4b1025902219416e9500862a2bf720f0dcf2a51e"
+    },
+    {
+      "name": "sintaxe de scripts publicados",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "schema publicado fato",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "schema publicado expressao",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "schema publicado consulta",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "schema publicado transformacao",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "schema publicado entrada-expressao",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "schema publicado saida-expressao",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "schema semântico sobre dados reais após publicação",
+      "ok": true,
+      "observed": []
+    },
+    {
+      "name": "schemas modulares preservados",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "prévias reais de modificações",
+      "ok": true,
+      "observed": 27
+    },
+    {
+      "name": "referências area localizadas no livro",
+      "ok": true,
+      "observed": 209
+    },
+    {
+      "name": "referências book localizadas",
+      "ok": true,
+      "observed": 14
+    },
+    {
+      "name": "expressão publicada executada com faces fornecidas",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "originais preservados",
+      "ok": true,
+      "observed": null
+    }
+  ],
+  "passed": 15,
+  "failed": 0,
+  "counts": {
+    "consultations": 622,
+    "facts": 686,
+    "expressions": 400,
+    "isolatedComponents": 347,
+    "transformations": 29,
+    "partialPreviews": 28,
+    "blockedTransforms": 1,
+    "fullyExecutableRules": 0,
+    "pending": 54
+  }
+}
