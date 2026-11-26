@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.7.0/integridade.schema.json",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": "1.7.0"
+    },
+    "coreSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "casesSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "reportSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "componentsSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "profilesSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "sourceSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "sourceValidationSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "canonicalization": {
+      "const": "RPG.canonical UTF-8 SHA-256"
+    }
+  },
+  "required": [
+    "version",
+    "coreSha256",
+    "casesSha256",
+    "reportSha256",
+    "componentsSha256",
+    "profilesSha256",
+    "sourceSha256",
+    "sourceValidationSha256",
+    "canonicalization"
+  ],
+  "additionalProperties": false
+}

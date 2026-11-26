@@ -1,4 +1,4 @@
-# RPG Extractor 1.6
+# RPG Extractor 1.7
 
 Aplicação independente e autocontida em `index.html`, preparada para GitHub Pages. Configuração inicial: XPHB, repositório público 5etools-mirror-3/5etools-src, branch main.
 
@@ -66,3 +66,10 @@ A exportação também reconcilia a lista de JSONs com a árvore verificada, os 
 - Simulador genérico de um ator: estado explícito, condições, pré-requisitos all/any/none, custos agregados, recursos limitados, cura, dano não terminal, condições; transação atômica por cópia, bloqueio de estados inválidos/mortos. Dano que leva a zero ou em zero PV exige adjudicação, não é automaticamente resolvido.
 - Perfis XPHB do commit de referência: escolha D20 com cancelamento de vantagem/desvantagem, uma salvaguarda contra morte com contadores, 1/20 e estados terminais; face fornecida externamente, sem cálculo de modificadores ou aplicação de dano. Evidências exportadas apenas quando as unidades existem. O laboratório usa exemplos explícitos, não aplica regras a personagens reais.
 - Onze schemas Draft 2020-12 e quatro arquivos motor/. A validação interna suporta os keywords usados. Templates, escalonamento contextual, tags de filtro, ativos e semântica integral continuam pendentes; não há importação no Hub. Scripts e contratos oficiais do plugin não disponíveis; testes próprios registrados em tests/resultados-v1.6.json. Não é teste integral no navegador.
+
+## Versão 1.7.0 — testes mecânicos reproduzíveis
+
+- Mantém motor e schemas 1.6.0, sem alterar regras ou IDs. Executa suíte genérica e testes de cada componente durante exportação; inclui evidência, entradas, expectativas, resultados, bloqueios, cobertura e hashes SHA-256 do core, casos, relatório, componentes, perfis e origem. O oráculo separado cobre gramática aditiva, multiplicação de dados e dados variáveis observados na referência XPHB. Não executado ou reprovado bloqueia aprovação mecânica, não a exportação diagnóstica. A importação permanece sempre bloqueada.
+- Valida códigos de fontes externas contra catálogo do escopo, com sugestões e sem alterar automaticamente a seleção. Código inexistente no catálogo impede exportação até correção; checkpoint preservado. Novo IndexedDB v1-7.
+- Testes de regressão numérica fixados para XPHB no commit de referência, 543 JSONs e XMM+XDMG. Relatórios distinguem pendências preexistentes (marcadores contextuais, Força, transformações, ativos) de falhas de testes. Não inventa regras, não materializa WoW. Suíte genérica disponível no laboratório.
+- Reexecução local: `python tests/regressao_v1_7.py caminho.zip` (Node 20+). Em v1.7 compara casos, relatório e selo, em v1.6 roda contra dados antigos; a validação de catálogo em ZIP v1.6 não é reconstruída. Novos schemas 1.7.0 são provisórios. Testes próprios, não os scripts oficiais do plugin. Veja tests/resultados-v1.7.json. Não certifica completude semântica ou integração.

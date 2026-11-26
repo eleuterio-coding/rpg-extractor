@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.7.0/relatorio.schema.json",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": "1.7.0"
+    },
+    "source": {
+      "type": "object"
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "passed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "notExecuted": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "total",
+        "passed",
+        "failed",
+        "notExecuted"
+      ],
+      "additionalProperties": false
+    },
+    "groups": {
+      "type": "object"
+    },
+    "componentCoverage": {
+      "type": "object",
+      "properties": {
+        "expected": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tested": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "passed": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "expected",
+        "tested",
+        "passed"
+      ],
+      "additionalProperties": false
+    },
+    "baseline": {
+      "type": "object"
+    },
+    "pending": {
+      "type": "object"
+    },
+    "status": {
+      "enum": [
+        "aprovado_no_escopo_testado",
+        "bloqueado"
+      ]
+    },
+    "bloquear_importacao": {
+      "const": true
+    },
+    "homologacao": {
+      "const": "bloqueada"
+    },
+    "limits": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "version",
+    "source",
+    "counts",
+    "groups",
+    "componentCoverage",
+    "baseline",
+    "pending",
+    "status",
+    "bloquear_importacao",
+    "homologacao",
+    "limits"
+  ],
+  "additionalProperties": false
+}

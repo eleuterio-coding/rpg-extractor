@@ -1,0 +1,138 @@
+{
+  "version": "1.7.0",
+  "source": {
+    "repo": "5etools-mirror-3/5etools-src",
+    "commit": "2512db75eb48ef06f6190b086a82430887906dca",
+    "code": "XPHB",
+    "scope": "data/"
+  },
+  "realFiles": [
+    "data/items-base.json",
+    "data/book/book-xphb.json",
+    "data/variantrules.json",
+    "data/spells/spells-xphb.json",
+    "data/bestiary/bestiary-xphb.json",
+    "data/class/class-fighter.json",
+    "data/feats.json"
+  ],
+  "records": 798,
+  "report": {
+    "version": "1.7.0",
+    "source": {
+      "repo": "5etools-mirror-3/5etools-src",
+      "commit": "2512db75eb48ef06f6190b086a82430887906dca",
+      "code": "XPHB",
+      "scope": "data/"
+    },
+    "counts": {
+      "total": 3625,
+      "passed": 3625,
+      "failed": 0,
+      "notExecuted": 0
+    },
+    "groups": {
+      "aritmetica": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0,
+        "notExecuted": 0
+      },
+      "transicao": {
+        "total": 22,
+        "passed": 22,
+        "failed": 0,
+        "notExecuted": 0
+      },
+      "d20": {
+        "total": 14,
+        "passed": 14,
+        "failed": 0,
+        "notExecuted": 0
+      },
+      "morte": {
+        "total": 16,
+        "passed": 16,
+        "failed": 0,
+        "notExecuted": 0
+      },
+      "fontes": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "notExecuted": 0
+      },
+      "componente": {
+        "total": 3540,
+        "passed": 3540,
+        "failed": 0,
+        "notExecuted": 0
+      },
+      "regressao": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0,
+        "notExecuted": 0
+      },
+      "perfil": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "notExecuted": 0
+      }
+    },
+    "componentCoverage": {
+      "expected": 732,
+      "tested": 732,
+      "passed": 732
+    },
+    "baseline": {
+      "applicable": false,
+      "scope": "XPHB, commit fixado, data/, 543 JSONs, XMM+XDMG",
+      "expected": {
+        "records": 4286,
+        "dependencies": 65,
+        "entities": 1679,
+        "facts": 6266,
+        "expressions": 1324,
+        "previousComponents": 1123,
+        "components": 1135,
+        "profiles": 2,
+        "references": 9951
+      },
+      "observed": {
+        "records": 798,
+        "dependencies": 0,
+        "entities": 797,
+        "facts": 4154,
+        "expressions": 855,
+        "previousComponents": 720,
+        "components": 732,
+        "profiles": 2,
+        "references": 5638
+      }
+    },
+    "pending": {
+      "engineExpressions": 123,
+      "auxiliaryExpressions": 0,
+      "blockedTransforms": 1,
+      "referenceOccurrences": 1732,
+      "assets": 63
+    },
+    "status": "aprovado_no_escopo_testado",
+    "bloquear_importacao": true,
+    "homologacao": "bloqueada",
+    "limits": [
+      "Oráculo independente cobre gramática aditiva e duas formas adicionais observadas no XPHB; outros casos ficam não executados.",
+      "Casos sintéticos de estados e efeitos não certificam regras completas.",
+      "Baseline numérico somente com escopo e fontes de referência completos.",
+      "Contratos e testes oficiais do Hub/plugin não disponíveis."
+    ]
+  },
+  "gateNegative": {
+    "tampered": 2,
+    "invalidSource": 1
+  },
+  "deterministic": true,
+  "baselineZipReferenceSha256": "b1ddbc15ae09d8474d0c988d574845e55fdfb1742687d9b2816190ec98373fc4",
+  "limitations": "Testes dirigidos em sete arquivos reais; baseline completo não executado nesta rodada."
+}

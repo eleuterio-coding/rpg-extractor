@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.7.0/caso.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "group": {
+      "type": "string",
+      "minLength": 1
+    },
+    "component": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "operation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input": {},
+    "expected": {},
+    "actual": {},
+    "status": {
+      "enum": [
+        "aprovado",
+        "reprovado",
+        "nao_executado"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "group",
+    "component",
+    "operation",
+    "input",
+    "expected",
+    "actual",
+    "status",
+    "reason"
+  ],
+  "additionalProperties": false
+}
