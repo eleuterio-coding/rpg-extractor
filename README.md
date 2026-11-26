@@ -1,4 +1,4 @@
-# RPG Extractor 1.4
+# RPG Extractor 1.5
 
 Aplicação independente e autocontida em `index.html`, preparada para GitHub Pages. Configuração inicial: XPHB, repositório público 5etools-mirror-3/5etools-src, branch main.
 
@@ -50,3 +50,11 @@ A exportação também reconcilia a lista de JSONs com a árvore verificada, os 
 - Corrige referências documentais por título/alias e tabela contextual, fonte padrão itemMastery apenas para commit verificado (js/render.js, TagItemMastery.defaultSource), marcadores hit/recharge e alvo de _copy por abreviação. Transformações não executadas. Ativos externos ausentes permanecem pendentes.
 - Novo IndexedDB v1-4: requer nova coleta. Exporta modulos/M01.json–M10.json, modulos/manifesto.json e schemas/1.4.0/*.schema.json. Preserva formatos anteriores. Homologação e importação bloqueadas.
 - Testes dirigidos sobre seis arquivos reais do commit XPHB e fixtures negativas/sintéticas: tests/resultados-v1.4.json. Não é teste integral de navegador ou auditoria de todos os 543 blobs. Nenhum payload do livro publicado.
+
+## Versão 1.5.0 — camada semântica parcial
+
+- Mantém módulos e schemas 1.4.0, registros originais, dependências e auditoria criptográfica. Nova camada derivada sem substituir fonte: consultas, fatos por campo, expressões AST restritas, prévias de transformações e pendências, com evidência de registro/ponteiro/commit/SHA. Vistas M07/M10 indexam texto para consulta, sem inventar regras.
+- AST de soma/subtração de constantes inteiras, dados fixos e variável explícita summonSpellLevel; entradas externas de faces e variáveis, sem eval ou RNG. Não executa combate, custos, efeitos, escalonamento contextual, condições nem regras completas. Zero regras integralmente executáveis declaradas.
+- Seis schemas JSON Draft 2020-12 (quatro tipos de registro e dois contratos de entrada/saída); validação interna do subconjunto utilizado. Schemas provisórios, não contratos oficiais do Hub. As prévias de _copy/_mod são limitadas ao commit verificado; quatro modos de array simples, sem templates, regex ou expansão integral, mantendo os originais pendentes.
+- Referências area podem localizar âncora do mesmo livro no perfil verificado; book com capítulo explícito usa seção e nome; publicação externa fica pendente. Não materializa WoW automaticamente nem baixa ativos.
+- Novo banco IndexedDB v1-5. Mantém opções de fontes e brutos. Novos arquivos em semantica/ e schemas/1.5.0/. Gates de importação e homologação continuam bloqueados. Ver testes/resultados-v1.5.json; testes dirigidos com dados reais e sintéticos, não nova coleta integral no navegador. Os scripts e schemas oficiais do plugin não estavam acessíveis.

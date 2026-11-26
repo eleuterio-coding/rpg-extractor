@@ -1,0 +1,218 @@
+{
+  "version": "1.5.0",
+  "source": {
+    "repo": "5etools-mirror-3/5etools-src",
+    "commit": "2512db75eb48ef06f6190b086a82430887906dca",
+    "code": "XPHB"
+  },
+  "checkedFiles": 7,
+  "records": 798,
+  "unavailable": [],
+  "checks": [
+    {
+      "name": "seleção real data/items-base.json",
+      "ok": true,
+      "observed": 134
+    },
+    {
+      "name": "seleção real data/class/class-fighter.json",
+      "ok": true,
+      "observed": 65
+    },
+    {
+      "name": "seleção real data/book/book-xphb.json",
+      "ok": true,
+      "observed": 1
+    },
+    {
+      "name": "seleção real data/feats.json",
+      "ok": true,
+      "observed": 77
+    },
+    {
+      "name": "seleção real data/spells/spells-xphb.json",
+      "ok": true,
+      "observed": 391
+    },
+    {
+      "name": "seleção real data/bestiary/bestiary-xphb.json",
+      "ok": true,
+      "observed": 15
+    },
+    {
+      "name": "seleção real data/variantrules.json",
+      "ok": true,
+      "observed": 115
+    },
+    {
+      "name": "schema modular anterior",
+      "ok": true,
+      "observed": []
+    },
+    {
+      "name": "validação semântica",
+      "ok": true,
+      "observed": []
+    },
+    {
+      "name": "sete categorias de arquivos semânticos ou contratos",
+      "ok": true,
+      "observed": [
+        "fato",
+        "expressao",
+        "consulta",
+        "transformacao",
+        "entrada-expressao",
+        "saida-expressao"
+      ]
+    },
+    {
+      "name": "camada original imutável",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "391 magias mantidas",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "campos reais de duração",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "alcance real",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "pré-requisitos reais",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "progressão real",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "vistas M07 e M10 consultivas",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "expressão real com dado",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "escalonamento preservado sem automação de regra",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "cópia real de entries em prévia",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "book cruzado do mesmo XPHB",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "book externo não convertido em regra",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "AST soma e dados",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "AST variável explícita",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "AST recusa código e operação não suportada",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "rejeita face zero",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "rejeita face acima",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "rejeita booleano",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "rejeita face ausente",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "rejeita face excedente",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "variável ausente rejeitada",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "quatro modos de array e imutabilidade",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "transformação rejeita regex",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "transformação rejeita alvo ausente",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "transformação rejeita template",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "schema rejeita componente com importação aberta",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "gates preservados",
+      "ok": true,
+      "observed": null
+    }
+  ],
+  "passed": 37,
+  "failed": 0,
+  "counts": {
+    "consultations": 1090,
+    "facts": 3660,
+    "expressions": 855,
+    "isolatedComponents": 720,
+    "transformations": 32,
+    "partialPreviews": 31,
+    "blockedTransforms": 1,
+    "fullyExecutableRules": 0,
+    "pending": 136
+  }
+}

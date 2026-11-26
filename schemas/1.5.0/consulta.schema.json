@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.5.0/consulta.schema.json",
+  "title": "consulta — contrato semântico provisório",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "schemaVersion",
+    "evidence",
+    "partition",
+    "module",
+    "bloquear_importacao",
+    "kind",
+    "natureza_conteudo",
+    "automation",
+    "name"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schemaVersion": {
+      "const": "1.5.0"
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record",
+        "path",
+        "pointer",
+        "source",
+        "sourceSha",
+        "commit"
+      ],
+      "properties": {
+        "record": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pointer": {
+          "type": "string",
+          "pattern": "^(?:/.*)?$"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceSha": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        }
+      }
+    },
+    "partition": {
+      "enum": [
+        "principal",
+        "dependencia",
+        "documento",
+        "auxiliar"
+      ]
+    },
+    "module": {
+      "enum": [
+        null,
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05",
+        "M06",
+        "M07",
+        "M08",
+        "M09",
+        "M10"
+      ]
+    },
+    "bloquear_importacao": {
+      "const": true
+    },
+    "kind": {
+      "enum": [
+        "entidade",
+        "trecho_documental"
+      ]
+    },
+    "natureza_conteudo": {
+      "const": "indeterminada"
+    },
+    "automation": {
+      "const": "consultiva"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}
