@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.6.0/ast.schema.json",
+  "title": "ast — contrato experimental",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "1.6.0"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "op": {
+                "const": "const"
+              },
+              "value": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000000
+              }
+            },
+            "required": [
+              "op",
+              "value"
+            ]
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "op": {
+                "const": "var"
+              },
+              "name": {
+                "const": "summonSpellLevel"
+              }
+            },
+            "required": [
+              "op",
+              "name"
+            ]
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "op": {
+                "const": "dice"
+              },
+              "sides": {
+                "type": "integer",
+                "minimum": 2,
+                "maximum": 1000
+              }
+            },
+            "required": [
+              "op",
+              "sides"
+            ]
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "op": {
+                "enum": [
+                  "neg",
+                  "floor",
+                  "ceil",
+                  "add",
+                  "sub",
+                  "mul",
+                  "div"
+                ]
+              }
+            },
+            "required": [
+              "op"
+            ]
+          }
+        ]
+      },
+      "maxItems": 96,
+      "minItems": 1
+    },
+    "variables": {
+      "type": "array",
+      "items": {
+        "const": "summonSpellLevel"
+      },
+      "maxItems": 1,
+      "minItems": 0,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "version",
+    "nodes",
+    "variables"
+  ]
+}

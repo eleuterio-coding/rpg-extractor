@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.6.0/saida-d20.schema.json",
+  "title": "saida-d20 — contrato experimental",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "value": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20
+    },
+    "mode": {
+      "enum": [
+        "normal",
+        "advantage",
+        "disadvantage"
+      ]
+    },
+    "rollsConsumed": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2
+    }
+  },
+  "required": [
+    "value",
+    "mode",
+    "rollsConsumed"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.6.0/saida.schema.json",
+  "title": "saida — contrato experimental",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "value": {
+      "type": "number",
+      "minimum": -1000000000,
+      "maximum": 1000000000
+    },
+    "rollsConsumed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    }
+  },
+  "required": [
+    "value",
+    "rollsConsumed"
+  ]
+}

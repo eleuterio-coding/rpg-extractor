@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.6.0/d20.schema.json",
+  "title": "d20 — contrato experimental",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "advantage": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "disadvantage": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "rolls": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 20
+      },
+      "maxItems": 2,
+      "minItems": 1
+    }
+  },
+  "required": [
+    "advantage",
+    "disadvantage",
+    "rolls"
+  ]
+}

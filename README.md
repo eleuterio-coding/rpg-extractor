@@ -1,4 +1,4 @@
-# RPG Extractor 1.5
+# RPG Extractor 1.6
 
 Aplicação independente e autocontida em `index.html`, preparada para GitHub Pages. Configuração inicial: XPHB, repositório público 5etools-mirror-3/5etools-src, branch main.
 
@@ -58,3 +58,11 @@ A exportação também reconcilia a lista de JSONs com a árvore verificada, os 
 - Seis schemas JSON Draft 2020-12 (quatro tipos de registro e dois contratos de entrada/saída); validação interna do subconjunto utilizado. Schemas provisórios, não contratos oficiais do Hub. As prévias de _copy/_mod são limitadas ao commit verificado; quatro modos de array simples, sem templates, regex ou expansão integral, mantendo os originais pendentes.
 - Referências area podem localizar âncora do mesmo livro no perfil verificado; book com capítulo explícito usa seção e nome; publicação externa fica pendente. Não materializa WoW automaticamente nem baixa ativos.
 - Novo banco IndexedDB v1-5. Mantém opções de fontes e brutos. Novos arquivos em semantica/ e schemas/1.5.0/. Gates de importação e homologação continuam bloqueados. Ver testes/resultados-v1.5.json; testes dirigidos com dados reais e sintéticos, não nova coleta integral no navegador. Os scripts e schemas oficiais do plugin não estavam acessíveis.
+
+## Versão 1.6.0 — motor experimental
+
+- Mantém coleta, checkpoints, verificação criptográfica, módulos 1.4 e camada 1.5. Adiciona sete campos semânticos omitidos. Novo IndexedDB v1-6; nova coleta necessária.
+- AST pós-fixa restrita com precedência, parênteses, soma, subtração, multiplicação, divisão, arredondamento explícito e quantidade variável de dados. Entradas de faces externas; sem eval nem RNG. Limites de tamanho, profundidade, dados, faces e valores. Componentes 1.6 separados dos anteriores, sem promoção de regra inteira.
+- Simulador genérico de um ator: estado explícito, condições, pré-requisitos all/any/none, custos agregados, recursos limitados, cura, dano não terminal, condições; transação atômica por cópia, bloqueio de estados inválidos/mortos. Dano que leva a zero ou em zero PV exige adjudicação, não é automaticamente resolvido.
+- Perfis XPHB do commit de referência: escolha D20 com cancelamento de vantagem/desvantagem, uma salvaguarda contra morte com contadores, 1/20 e estados terminais; face fornecida externamente, sem cálculo de modificadores ou aplicação de dano. Evidências exportadas apenas quando as unidades existem. O laboratório usa exemplos explícitos, não aplica regras a personagens reais.
+- Onze schemas Draft 2020-12 e quatro arquivos motor/. A validação interna suporta os keywords usados. Templates, escalonamento contextual, tags de filtro, ativos e semântica integral continuam pendentes; não há importação no Hub. Scripts e contratos oficiais do plugin não disponíveis; testes próprios registrados em tests/resultados-v1.6.json. Não é teste integral no navegador.

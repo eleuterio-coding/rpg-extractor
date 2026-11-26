@@ -1,0 +1,308 @@
+{
+  "version": "1.6.0",
+  "source": {
+    "repo": "5etools-mirror-3/5etools-src",
+    "commit": "2512db75eb48ef06f6190b086a82430887906dca",
+    "code": "XPHB"
+  },
+  "realFiles": [
+    "data/items-base.json",
+    "data/book/book-xphb.json",
+    "data/variantrules.json",
+    "data/spells/spells-xphb.json",
+    "data/bestiary/bestiary-xphb.json",
+    "data/class/class-fighter.json",
+    "data/feats.json"
+  ],
+  "records": 798,
+  "checks": [
+    {
+      "name": "precedência e parênteses",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "multiplicação real 1d10 × 250",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "divisão e arredondamento explícito",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "dados variáveis",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "quantidade zero",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "dado implícito d20",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "quantidade negativa",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "divisão por zero",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "dado fora da face",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "dado excedente",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "variável ausente",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "variável booleana",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "sintaxe arbitrária recusada",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "transição atômica com custo, cura e condição",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "custos agregados insuficientes",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "pré-requisito falso",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "efeito terminal não adjudicado",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "falhas não alteram entrada",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "morto não recupera PV",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "estado morto ausente",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "recurso negativo",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "normal",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "vantagem",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "desvantagem",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "cancelamento desigual",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "sem vantagem não aceita segundo dado",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "cancelamento não aceita segundo dado",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "1 natural soma duas falhas",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "20 natural recupera um PV e zera contadores",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "terceira falha encerra",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "terceiro sucesso estabiliza",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "morto não realiza salvaguarda",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "estável não realiza salvaguarda",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "PV positivo não realiza salvaguarda",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "schema de saída da transição",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "auditoria real data/items-base.json",
+      "ok": true,
+      "observed": 134
+    },
+    {
+      "name": "auditoria real data/book/book-xphb.json",
+      "ok": true,
+      "observed": 1
+    },
+    {
+      "name": "auditoria real data/variantrules.json",
+      "ok": true,
+      "observed": 115
+    },
+    {
+      "name": "auditoria real data/spells/spells-xphb.json",
+      "ok": true,
+      "observed": 391
+    },
+    {
+      "name": "auditoria real data/bestiary/bestiary-xphb.json",
+      "ok": true,
+      "observed": 15
+    },
+    {
+      "name": "auditoria real data/class/class-fighter.json",
+      "ok": true,
+      "observed": 65
+    },
+    {
+      "name": "auditoria real data/feats.json",
+      "ok": true,
+      "observed": 77
+    },
+    {
+      "name": "schemas modulares e semânticos preservados",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "391 escolas de magia recuperadas",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "31 metadados de magia recuperados",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "componentes validados",
+      "ok": true,
+      "observed": []
+    },
+    {
+      "name": "dois perfis com fonte real",
+      "ok": true,
+      "observed": 2
+    },
+    {
+      "name": "dados reais variáveis ou multiplicação recuperados",
+      "ok": true,
+      "observed": 732
+    },
+    {
+      "name": "cálculo de componentes reais com entradas reproduzíveis",
+      "ok": true,
+      "observed": {
+        "computed": 732,
+        "failed": 0
+      }
+    },
+    {
+      "name": "dados originais imutáveis",
+      "ok": true,
+      "observed": null
+    },
+    {
+      "name": "homologação bloqueada",
+      "ok": true,
+      "observed": null
+    }
+  ],
+  "passed": 51,
+  "failed": 0,
+  "engine": {
+    "version": "1.6.0",
+    "valid": true,
+    "errors": [],
+    "components": 732,
+    "previousComponents": 720,
+    "profileComponents": 2,
+    "pendingExpressions": 123,
+    "fullyExecutableRules": 0,
+    "bloquear_importacao": true,
+    "homologacao": "bloqueada",
+    "limitations": [
+      "Simulação genérica de um ator; custos e efeitos são declarados pelo usuário, não extraídos automaticamente de texto.",
+      "Expressões suportadas não certificam aplicação de dano, geometria, tempo, escalonamento contextual ou condições completas.",
+      "Perfis específicos exigem fonte e commit verificados; operações arbitrárias, templates e regras incompletas não são promovidas."
+    ]
+  },
+  "semanticCounts": {
+    "consultations": 1090,
+    "facts": 4154,
+    "expressions": 855,
+    "isolatedComponents": 720,
+    "transformations": 32,
+    "partialPreviews": 31,
+    "blockedTransforms": 1,
+    "fullyExecutableRules": 0,
+    "pending": 136
+  }
+}

@@ -1,0 +1,586 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.6.0/transicao.schema.json",
+  "title": "transicao — contrato experimental",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "state": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "hp": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "maxHp": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "dead": {
+          "type": "boolean"
+        },
+        "stable": {
+          "type": "boolean"
+        },
+        "successes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "failures": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,39}$"
+              },
+              "current": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "maximum": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              }
+            },
+            "required": [
+              "id",
+              "current",
+              "maximum"
+            ]
+          },
+          "maxItems": 100,
+          "minItems": 0
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,39}$"
+          },
+          "maxItems": 100,
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "hp",
+        "maxHp",
+        "dead",
+        "stable",
+        "successes",
+        "failures",
+        "resources",
+        "conditions"
+      ]
+    },
+    "requires": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "all": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "field": {
+                    "enum": [
+                      "hp",
+                      "maxHp",
+                      "successes",
+                      "failures"
+                    ]
+                  },
+                  "op": {
+                    "enum": [
+                      "eq",
+                      "ne",
+                      "lt",
+                      "lte",
+                      "gt",
+                      "gte"
+                    ]
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000
+                  }
+                },
+                "required": [
+                  "field",
+                  "op",
+                  "value"
+                ]
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "field": {
+                    "enum": [
+                      "dead",
+                      "stable"
+                    ]
+                  },
+                  "op": {
+                    "enum": [
+                      "eq",
+                      "ne"
+                    ]
+                  },
+                  "value": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "field",
+                  "op",
+                  "value"
+                ]
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "field": {
+                    "const": "resource"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,39}$"
+                  },
+                  "op": {
+                    "enum": [
+                      "eq",
+                      "ne",
+                      "lt",
+                      "lte",
+                      "gt",
+                      "gte"
+                    ]
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000
+                  }
+                },
+                "required": [
+                  "field",
+                  "id",
+                  "op",
+                  "value"
+                ]
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "field": {
+                    "const": "condition"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,39}$"
+                  },
+                  "op": {
+                    "enum": [
+                      "present",
+                      "absent"
+                    ]
+                  }
+                },
+                "required": [
+                  "field",
+                  "id",
+                  "op"
+                ]
+              }
+            ]
+          },
+          "maxItems": 40,
+          "minItems": 0
+        },
+        "any": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "field": {
+                    "enum": [
+                      "hp",
+                      "maxHp",
+                      "successes",
+                      "failures"
+                    ]
+                  },
+                  "op": {
+                    "enum": [
+                      "eq",
+                      "ne",
+                      "lt",
+                      "lte",
+                      "gt",
+                      "gte"
+                    ]
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000
+                  }
+                },
+                "required": [
+                  "field",
+                  "op",
+                  "value"
+                ]
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "field": {
+                    "enum": [
+                      "dead",
+                      "stable"
+                    ]
+                  },
+                  "op": {
+                    "enum": [
+                      "eq",
+                      "ne"
+                    ]
+                  },
+                  "value": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "field",
+                  "op",
+                  "value"
+                ]
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "field": {
+                    "const": "resource"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,39}$"
+                  },
+                  "op": {
+                    "enum": [
+                      "eq",
+                      "ne",
+                      "lt",
+                      "lte",
+                      "gt",
+                      "gte"
+                    ]
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000
+                  }
+                },
+                "required": [
+                  "field",
+                  "id",
+                  "op",
+                  "value"
+                ]
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "field": {
+                    "const": "condition"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,39}$"
+                  },
+                  "op": {
+                    "enum": [
+                      "present",
+                      "absent"
+                    ]
+                  }
+                },
+                "required": [
+                  "field",
+                  "id",
+                  "op"
+                ]
+              }
+            ]
+          },
+          "maxItems": 40,
+          "minItems": 0
+        },
+        "none": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "field": {
+                    "enum": [
+                      "hp",
+                      "maxHp",
+                      "successes",
+                      "failures"
+                    ]
+                  },
+                  "op": {
+                    "enum": [
+                      "eq",
+                      "ne",
+                      "lt",
+                      "lte",
+                      "gt",
+                      "gte"
+                    ]
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000
+                  }
+                },
+                "required": [
+                  "field",
+                  "op",
+                  "value"
+                ]
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "field": {
+                    "enum": [
+                      "dead",
+                      "stable"
+                    ]
+                  },
+                  "op": {
+                    "enum": [
+                      "eq",
+                      "ne"
+                    ]
+                  },
+                  "value": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "field",
+                  "op",
+                  "value"
+                ]
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "field": {
+                    "const": "resource"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,39}$"
+                  },
+                  "op": {
+                    "enum": [
+                      "eq",
+                      "ne",
+                      "lt",
+                      "lte",
+                      "gt",
+                      "gte"
+                    ]
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000
+                  }
+                },
+                "required": [
+                  "field",
+                  "id",
+                  "op",
+                  "value"
+                ]
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "field": {
+                    "const": "condition"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,39}$"
+                  },
+                  "op": {
+                    "enum": [
+                      "present",
+                      "absent"
+                    ]
+                  }
+                },
+                "required": [
+                  "field",
+                  "id",
+                  "op"
+                ]
+              }
+            ]
+          },
+          "maxItems": 40,
+          "minItems": 0
+        }
+      },
+      "required": [
+        "all",
+        "any",
+        "none"
+      ]
+    },
+    "costs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,39}$"
+          },
+          "amount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000000
+          }
+        },
+        "required": [
+          "id",
+          "amount"
+        ]
+      },
+      "maxItems": 100,
+      "minItems": 0
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "op": {
+                "enum": [
+                  "heal",
+                  "damage"
+                ]
+              },
+              "amount": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              }
+            },
+            "required": [
+              "op",
+              "amount"
+            ]
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "op": {
+                "const": "gain"
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,39}$"
+              },
+              "amount": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              }
+            },
+            "required": [
+              "op",
+              "id",
+              "amount"
+            ]
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "op": {
+                "enum": [
+                  "addCondition",
+                  "removeCondition"
+                ]
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,39}$"
+              }
+            },
+            "required": [
+              "op",
+              "id"
+            ]
+          }
+        ]
+      },
+      "maxItems": 100,
+      "minItems": 0
+    }
+  },
+  "required": [
+    "state",
+    "requires",
+    "costs",
+    "effects"
+  ]
+}

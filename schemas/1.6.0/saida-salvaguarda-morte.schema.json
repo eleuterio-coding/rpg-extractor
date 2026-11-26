@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.6.0/saida-salvaguarda-morte.schema.json",
+  "title": "saida-salvaguarda-morte — contrato experimental",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "state": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "hp": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "maxHp": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "dead": {
+          "type": "boolean"
+        },
+        "stable": {
+          "type": "boolean"
+        },
+        "successes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "failures": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,39}$"
+              },
+              "current": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "maximum": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              }
+            },
+            "required": [
+              "id",
+              "current",
+              "maximum"
+            ]
+          },
+          "maxItems": 100,
+          "minItems": 0
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,39}$"
+          },
+          "maxItems": 100,
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "hp",
+        "maxHp",
+        "dead",
+        "stable",
+        "successes",
+        "failures",
+        "resources",
+        "conditions"
+      ]
+    },
+    "outcome": {
+      "enum": [
+        "failure",
+        "success",
+        "stable",
+        "dead",
+        "recover"
+      ]
+    },
+    "rollsConsumed": {
+      "const": 1
+    }
+  },
+  "required": [
+    "state",
+    "outcome",
+    "rollsConsumed"
+  ]
+}
