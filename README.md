@@ -1,4 +1,4 @@
-# RPG Extractor 1.3
+# RPG Extractor 1.4
 
 Aplicação independente e autocontida em `index.html`, preparada para GitHub Pages. Configuração inicial: XPHB, repositório público 5etools-mirror-3/5etools-src, branch main.
 
@@ -42,3 +42,11 @@ A cobertura é estrutural dentro do escopo implementado, não uma comprovação 
 ### Revisão de exportação 1.3
 
 A exportação também reconcilia a lista de JSONs com a árvore verificada, os checkpoints e os tamanhos; refaz a auditoria de seleção e o catálogo a partir dos bytes brutos antes de gerar o ZIP. `dependencias/pendencias.json` inclui falhas de materialização e ocorrências ainda pendentes; os estados anteriores das referências a criaturas são preservados no campo `previousStatus`. Cinco verificações adicionais passaram: inventário de 543 JSONs na subárvore real (metadados e checkpoints simulados), detecção de checkpoint ausente, detecção de SHA divergente, preservação do estado anterior e ciclo recursivo. Total: 22 verificações iniciais e cinco adicionais; não é uma reexecução integral de todos os casos sobre a revisão final. A auditoria integral do ZIP gerado no navegador continua pendente.
+
+## Versão 1.4.0 — taxonomia modular provisória
+
+- Dez módulos M01–M10 e schemas JSON Draft 2020-12, gerados da mesma definição que o validador interno (subconjunto dos keywords utilizados). Validam envelopes e categorias, não semântica interna. Não são contratos do Hub.
+- Separa registros principais e dependências, mantém SHA e ponteiros, vistas documentais de itens mágicos e exploração e relatório de itens ambíguos. Não declara módulos vazios completos.
+- Corrige referências documentais por título/alias e tabela contextual, fonte padrão itemMastery apenas para commit verificado (js/render.js, TagItemMastery.defaultSource), marcadores hit/recharge e alvo de _copy por abreviação. Transformações não executadas. Ativos externos ausentes permanecem pendentes.
+- Novo IndexedDB v1-4: requer nova coleta. Exporta modulos/M01.json–M10.json, modulos/manifesto.json e schemas/1.4.0/*.schema.json. Preserva formatos anteriores. Homologação e importação bloqueadas.
+- Testes dirigidos sobre seis arquivos reais do commit XPHB e fixtures negativas/sintéticas: tests/resultados-v1.4.json. Não é teste integral de navegador ou auditoria de todos os 543 blobs. Nenhum payload do livro publicado.

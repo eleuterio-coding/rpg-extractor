@@ -1,0 +1,213 @@
+{
+  "checks": [
+    {
+      "name": "seleção real data/items-base.json",
+      "ok": true
+    },
+    {
+      "name": "seleção real data/class/class-fighter.json",
+      "ok": true
+    },
+    {
+      "name": "seleção real data/class/class-sorcerer.json",
+      "ok": true
+    },
+    {
+      "name": "seleção real data/book/book-xphb.json",
+      "ok": true
+    },
+    {
+      "name": "seleção real data/feats.json",
+      "ok": true
+    },
+    {
+      "name": "seleção real data/spells/spells-xphb.json",
+      "ok": true
+    },
+    {
+      "name": "10 schemas e módulos",
+      "ok": true
+    },
+    {
+      "name": "módulos reais válidos",
+      "ok": true
+    },
+    {
+      "name": "nove propriedades no M06",
+      "ok": true
+    },
+    {
+      "name": "391 magias no M08",
+      "ok": true
+    },
+    {
+      "name": "M07 vista documental",
+      "ok": true
+    },
+    {
+      "name": "M10 vistas documentais",
+      "ok": true
+    },
+    {
+      "name": "maestria real Fighter",
+      "ok": true
+    },
+    {
+      "name": "tabela real Wild Magic Surge",
+      "ok": true
+    },
+    {
+      "name": "lista real de perícias",
+      "ok": true
+    },
+    {
+      "name": "fonte padrão real e rastreável",
+      "ok": true
+    },
+    {
+      "name": "proveniência do _copy localizada sem execução",
+      "ok": true
+    },
+    {
+      "name": "identidade e conteúdo original preservados",
+      "ok": true
+    },
+    {
+      "name": "schema rejeita liberação de importação",
+      "ok": true
+    },
+    {
+      "name": "schema rejeita categoria errada",
+      "ok": true
+    },
+    {
+      "name": "schema rejeita hash inválido",
+      "ok": true
+    },
+    {
+      "name": "dependência mágica segregada",
+      "ok": true
+    },
+    {
+      "name": "item ambíguo não forçado",
+      "ok": true
+    },
+    {
+      "name": "bloqueio mantido",
+      "ok": true
+    },
+    {
+      "name": "hit e recharge não executados",
+      "ok": true
+    }
+  ],
+  "realFiles": [
+    "data/items-base.json",
+    "data/class/class-fighter.json",
+    "data/class/class-sorcerer.json",
+    "data/book/book-xphb.json",
+    "data/feats.json",
+    "data/spells/spells-xphb.json"
+  ],
+  "commit": "2512db75eb48ef06f6190b086a82430887906dca",
+  "records": 717,
+  "modular": {
+    "M01": {
+      "records": 114,
+      "dependencies": 0,
+      "documentViews": 0,
+      "valid": true,
+      "errors": [],
+      "coverageState": "candidatos_presentes",
+      "homologacao": "bloqueada"
+    },
+    "M02": {
+      "records": 0,
+      "dependencies": 0,
+      "documentViews": 0,
+      "valid": true,
+      "errors": [],
+      "coverageState": "sem_candidatos_na_coleta",
+      "homologacao": "bloqueada"
+    },
+    "M03": {
+      "records": 0,
+      "dependencies": 0,
+      "documentViews": 0,
+      "valid": true,
+      "errors": [],
+      "coverageState": "sem_candidatos_na_coleta",
+      "homologacao": "bloqueada"
+    },
+    "M04": {
+      "records": 77,
+      "dependencies": 0,
+      "documentViews": 0,
+      "valid": true,
+      "errors": [],
+      "coverageState": "candidatos_presentes",
+      "homologacao": "bloqueada"
+    },
+    "M05": {
+      "records": 0,
+      "dependencies": 0,
+      "documentViews": 0,
+      "valid": true,
+      "errors": [],
+      "coverageState": "sem_candidatos_na_coleta",
+      "homologacao": "bloqueada"
+    },
+    "M06": {
+      "records": 134,
+      "dependencies": 0,
+      "documentViews": 0,
+      "valid": true,
+      "errors": [],
+      "coverageState": "candidatos_presentes",
+      "homologacao": "bloqueada"
+    },
+    "M07": {
+      "records": 0,
+      "dependencies": 0,
+      "documentViews": 1,
+      "valid": true,
+      "errors": [],
+      "coverageState": "candidatos_presentes",
+      "homologacao": "bloqueada"
+    },
+    "M08": {
+      "records": 391,
+      "dependencies": 0,
+      "documentViews": 0,
+      "valid": true,
+      "errors": [],
+      "coverageState": "candidatos_presentes",
+      "homologacao": "bloqueada"
+    },
+    "M09": {
+      "records": 0,
+      "dependencies": 0,
+      "documentViews": 0,
+      "valid": true,
+      "errors": [],
+      "coverageState": "sem_candidatos_na_coleta",
+      "homologacao": "bloqueada"
+    },
+    "M10": {
+      "records": 0,
+      "dependencies": 0,
+      "documentViews": 4,
+      "valid": true,
+      "errors": [],
+      "coverageState": "candidatos_presentes",
+      "homologacao": "bloqueada"
+    }
+  },
+  "refs": {
+    "mastery": 38,
+    "weaponMastery": 2,
+    "wild": 2,
+    "skills": 1
+  },
+  "failed": 0
+}
