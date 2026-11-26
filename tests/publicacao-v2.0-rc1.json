@@ -1,0 +1,90 @@
+{
+  "version": "2.0.0-rc.1",
+  "revision": "c3a570a6bb19cba394cc8921b849d892ffabd40d",
+  "checks": [
+    {
+      "name": "main e commit idênticos",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "núcleo 1.7 idêntico à publicação 1.9",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "sintaxe scripts relidos",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "11 schemas carregados",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "autotestes legados",
+      "ok": true,
+      "detail": {
+        "total": 78,
+        "passed": 78,
+        "failed": 0,
+        "notExecuted": 0
+      }
+    },
+    {
+      "name": "lista de scripts SRI index.html",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "lista de scripts SRI pf2e.html",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "PF2e real: 16 casos aprovados",
+      "ok": true,
+      "detail": {
+        "total": 16,
+        "passed": 16,
+        "failed": 0
+      }
+    }
+  ],
+  "passed": 8,
+  "failed": 0,
+  "referenceZipPredictions": {
+    "XPHB": {
+      "records": 4351,
+      "persistent": 1744,
+      "recordCollisions": 0,
+      "componentIdentities": 1156,
+      "componentCollisions": 0,
+      "dependencies": {
+        "total": 8811,
+        "resolved": 7772,
+        "review": 980,
+        "critical": 59
+      },
+      "blockedRecords": 1033,
+      "blockedPrincipal": 731,
+      "principal": 1679,
+      "expectedNewTests": 2038
+    },
+    "PF2E": {
+      "records": 27,
+      "persistent": 27,
+      "componentIdentities": 21,
+      "recordCollisions": 0,
+      "componentCollisions": 0,
+      "dependencies": {
+        "total": 36,
+        "review": 36
+      },
+      "blockedRecords": 27,
+      "blockedPrincipal": 27
+    }
+  },
+  "limits": "Previsões independentes calculadas em Python a partir dos ZIPs 1.9; não execução integral RC1. Conferência de SRI por hash feita na integração anterior, aqui relidos os scripts e a lista de tags. Não executado navegador completo."
+}
