@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.1/probabilidade.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "raw": {
+      "type": "string",
+      "minLength": 1
+    },
+    "base": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "cumulative": {
+      "type": "boolean"
+    },
+    "state": {
+      "const": "componente_isolado"
+    },
+    "bloquear_importacao": {
+      "const": true
+    }
+  },
+  "required": [
+    "id",
+    "record",
+    "evidence",
+    "raw",
+    "base",
+    "cumulative",
+    "state",
+    "bloquear_importacao"
+  ],
+  "additionalProperties": false
+}

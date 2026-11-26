@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.1/identidade.schema.json",
+  "type": "object",
+  "properties": {
+    "logicalId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revisionId": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "legacyId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "localId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "adapter": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
+        },
+        "system": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
+        },
+        "edition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publication": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "adapter",
+        "system",
+        "edition",
+        "publication"
+      ],
+      "additionalProperties": false
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contentSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "sourceSha": {
+      "type": "string",
+      "minLength": 1
+    },
+    "commit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stability": {
+      "enum": [
+        "chave_nativa",
+        "chave_contextual",
+        "somente_revisao"
+      ]
+    },
+    "partition": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "logicalId",
+    "revisionId",
+    "legacyId",
+    "localId",
+    "scope",
+    "kind",
+    "contentSha256",
+    "sourceSha",
+    "commit",
+    "stability",
+    "partition"
+  ],
+  "additionalProperties": false
+}

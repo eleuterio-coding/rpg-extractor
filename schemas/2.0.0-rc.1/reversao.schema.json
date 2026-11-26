@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.1/reversao.schema.json",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": "2.0.0-rc.1"
+    },
+    "before": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "2.0.0-rc.1"
+        },
+        "scope": {
+          "type": "object",
+          "properties": {
+            "adapter": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]{1,63}$"
+            },
+            "system": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]{1,63}$"
+            },
+            "edition": {
+              "type": "string",
+              "minLength": 1
+            },
+            "publication": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "adapter",
+            "system",
+            "edition",
+            "publication"
+          ],
+          "additionalProperties": false
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "logicalId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "revisionId": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "scope": {
+                "type": "object",
+                "properties": {
+                  "adapter": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9-]{1,63}$"
+                  },
+                  "system": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9-]{1,63}$"
+                  },
+                  "edition": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "publication": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "adapter",
+                  "system",
+                  "edition",
+                  "publication"
+                ],
+                "additionalProperties": false
+              },
+              "kind": {
+                "type": "string",
+                "minLength": 1
+              },
+              "contentSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "logicalId",
+              "revisionId",
+              "scope",
+              "kind",
+              "contentSha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "official": {
+          "const": false
+        },
+        "bloquear_importacao": {
+          "const": true
+        }
+      },
+      "required": [
+        "version",
+        "scope",
+        "items",
+        "official",
+        "bloquear_importacao"
+      ],
+      "additionalProperties": false
+    },
+    "afterSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "official": {
+      "const": false
+    },
+    "bloquear_importacao": {
+      "const": true
+    }
+  },
+  "required": [
+    "version",
+    "before",
+    "afterSha256",
+    "official",
+    "bloquear_importacao"
+  ],
+  "additionalProperties": false
+}

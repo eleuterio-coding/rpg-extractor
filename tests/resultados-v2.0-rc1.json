@@ -1,0 +1,239 @@
+{
+  "version": "2.0.0-rc.1",
+  "checks": [
+    {
+      "name": "regressão 1.7 real",
+      "ok": true,
+      "detail": {
+        "total": 2245,
+        "passed": 2245,
+        "failed": 0,
+        "notExecuted": 0
+      }
+    },
+    {
+      "name": "dez probabilidades reais",
+      "ok": true,
+      "detail": [
+        {
+          "base": 25,
+          "cumulative": true
+        },
+        {
+          "base": 25,
+          "cumulative": true
+        },
+        {
+          "base": 25,
+          "cumulative": false
+        },
+        {
+          "base": 25,
+          "cumulative": true
+        },
+        {
+          "base": 50,
+          "cumulative": false
+        },
+        {
+          "base": 50,
+          "cumulative": false
+        },
+        {
+          "base": 5,
+          "cumulative": true
+        },
+        {
+          "base": 5,
+          "cumulative": false
+        },
+        {
+          "base": 25,
+          "cumulative": false
+        },
+        {
+          "base": 33,
+          "cumulative": false
+        }
+      ]
+    },
+    {
+      "name": "probabilidades sem divergências",
+      "ok": true,
+      "detail": 128
+    },
+    {
+      "name": "dois perfis independentes",
+      "ok": true,
+      "detail": [
+        {
+          "id": "xphb-d20",
+          "evidence": true,
+          "tests": 1704,
+          "passed": 1704,
+          "state": "aprovado_no_escopo_testado",
+          "bloquear_importacao": true
+        },
+        {
+          "id": "xphb-death-save",
+          "evidence": true,
+          "tests": 185,
+          "passed": 185,
+          "state": "aprovado_no_escopo_testado",
+          "bloquear_importacao": true
+        }
+      ]
+    },
+    {
+      "name": "identidades sem colisão na amostra",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "dependências bloqueiam migração",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "PF2e 1.9 preservado",
+      "ok": true,
+      "detail": {
+        "total": 16,
+        "passed": 16,
+        "failed": 0
+      }
+    },
+    {
+      "name": "PF2e contextual bloqueado",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "criação local projetada",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "idempotência",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "identidade PF estável por ID nativo entre commits e caminhos",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "nova revisão sem alteração semântica",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "conteúdo alterado conflito",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "reversão exata",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "reversão de estado divergente recusada",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "colisão lógica detectada",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "sem escrita e integração bloqueada",
+      "ok": true,
+      "detail": null
+    }
+  ],
+  "passed": 17,
+  "failed": 0,
+  "dnd": {
+    "version": "2.0.0-rc.1",
+    "scope": {
+      "adapter": "dnd5e-5etools",
+      "system": "dnd5e",
+      "edition": "5e-2024-revisada",
+      "publication": "XPHB"
+    },
+    "identities": 507,
+    "persistent": 506,
+    "collisions": 0,
+    "dependencyRows": 4120,
+    "blockedRecords": 335,
+    "probabilityComponents": 10,
+    "profiles": [
+      {
+        "id": "xphb-d20",
+        "evidence": true,
+        "tests": 1704,
+        "passed": 1704,
+        "state": "aprovado_no_escopo_testado",
+        "bloquear_importacao": true
+      },
+      {
+        "id": "xphb-death-save",
+        "evidence": true,
+        "tests": 185,
+        "passed": 185,
+        "state": "aprovado_no_escopo_testado",
+        "bloquear_importacao": true
+      }
+    ],
+    "tests": {
+      "total": 2017,
+      "passed": 2017,
+      "failed": 0
+    },
+    "migrationStatus": "bloqueado",
+    "official": false,
+    "bloquear_importacao": true,
+    "limits": [
+      "Identidade contextual não prova equivalência após renomeação; sem união automática. Auxiliares têm somente identidade de revisão.",
+      "Migração de registros principais exclusivamente; componentes mantêm identidade legada e revisão individual 1.9. Sem exclusões ou sobrescrita semântica.",
+      "Pendências críticas e de revisão bloqueiam registros e dependentes; ativos não classificados não são presumidos decorativos.",
+      "Probabilidade e perfis são componentes isolados; não há execução integral.",
+      "Sem contrato oficial, sem escrita de destino."
+    ]
+  },
+  "pf": {
+    "version": "2.0.0-rc.1",
+    "scope": {
+      "adapter": "pf2e-foundry",
+      "system": "pf2e",
+      "edition": "remaster",
+      "publication": "Pathfinder Player Core"
+    },
+    "identities": 3,
+    "persistent": 3,
+    "collisions": 0,
+    "dependencyRows": 4,
+    "blockedRecords": 3,
+    "probabilityComponents": 0,
+    "profiles": [],
+    "tests": {
+      "total": 0,
+      "passed": 0,
+      "failed": 0
+    },
+    "migrationStatus": "bloqueado",
+    "official": false,
+    "bloquear_importacao": true,
+    "limits": [
+      "Identidade contextual não prova equivalência após renomeação; sem união automática. Auxiliares têm somente identidade de revisão.",
+      "Migração de registros principais exclusivamente; componentes mantêm identidade legada e revisão individual 1.9. Sem exclusões ou sobrescrita semântica.",
+      "Pendências críticas e de revisão bloqueiam registros e dependentes; ativos não classificados não são presumidos decorativos.",
+      "Probabilidade e perfis são componentes isolados; não há execução integral.",
+      "Sem contrato oficial, sem escrita de destino."
+    ]
+  },
+  "limits": "Três JSONs D&D e três PF2e reais pelo conector. Migração usa variantes sintéticas de registro real; não é replay integral dos ZIPs nem browser. Sem contrato Hub."
+}

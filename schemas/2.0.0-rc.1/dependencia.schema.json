@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.1/dependencia.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "severity": {
+      "enum": [
+        "critica",
+        "revisao",
+        "informativa",
+        "resolvida"
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "id",
+    "record",
+    "target",
+    "kind",
+    "severity",
+    "reason"
+  ],
+  "additionalProperties": false
+}
