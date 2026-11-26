@@ -1,0 +1,101 @@
+{
+  "revision": "c4f44dfa17c777be364c2e4560ad04438e74259b",
+  "checks": [
+    {
+      "name": "ambos perfis reais localizados",
+      "ok": true
+    },
+    {
+      "name": "30 casos de perfil reexecutados",
+      "ok": true
+    },
+    {
+      "name": "perfis não promovidos",
+      "ok": true
+    },
+    {
+      "name": "perfil adulterado bloqueia revisão",
+      "ok": true
+    },
+    {
+      "name": "origem omitida bloqueia revisão",
+      "ok": true
+    },
+    {
+      "name": "todos os demais componentes revisados",
+      "ok": true
+    },
+    {
+      "name": "suíte anterior aprovada",
+      "ok": true
+    }
+  ],
+  "review": {
+    "version": "1.9.0",
+    "scope": {
+      "adapter": "dnd5e-5etools",
+      "system": "dnd5e",
+      "edition": "5e-2024-revisada",
+      "publication": "XPHB"
+    },
+    "records": 116,
+    "components": 199,
+    "passedComponents": 197,
+    "blockedComponents": 2,
+    "sourcePending": 2363,
+    "sourceFailures": 0,
+    "releaseIntegrity": "conferida",
+    "reviewStatus": "aprovado_no_escopo_testado",
+    "official": false,
+    "integration": "bloqueada",
+    "bloquear_importacao": true,
+    "limits": [
+      "Estados individuais e escopos não certificam regras completas.",
+      "Prova local de correspondência com registros previamente verificados; não é auditoria externa do livro.",
+      "Perfis compostos permanecem fora de candidaturas à importação.",
+      "Sem contrato oficial Hub, sem API de destino, sem gravação."
+    ]
+  },
+  "profiles": [
+    {
+      "id": "xphb-d20",
+      "state": "nao_testado",
+      "sourceEvidence": "conferida",
+      "tests": {
+        "passed": 14,
+        "failed": 0,
+        "positive": 7,
+        "negative": 7,
+        "isolation": 0
+      }
+    },
+    {
+      "id": "xphb-death-save",
+      "state": "nao_testado",
+      "sourceEvidence": "conferida",
+      "tests": {
+        "passed": 16,
+        "failed": 0,
+        "positive": 9,
+        "negative": 7,
+        "isolation": 0
+      }
+    }
+  ],
+  "legacyTests": {
+    "total": 833,
+    "passed": 833,
+    "failed": 0,
+    "notExecuted": 0
+  },
+  "sourceFiles": [
+    {
+      "path": "data/variantrules.json",
+      "sha": "50aa247b5e758c518956766f8475f2cf6d5e6532"
+    },
+    {
+      "path": "data/book/book-xphb.json",
+      "sha": "f7651e4c7d8b168bec68d11a01c4f6c807ba0eed"
+    }
+  ]
+}
