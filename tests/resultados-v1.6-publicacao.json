@@ -1,0 +1,98 @@
+{
+  "release": "90fa2557045234b5dbba2efc998672ad51a3a4ca",
+  "codeBlob": "4fd72a1ea42d151d1c75528141b6fcfc02336052",
+  "checks": [
+    {
+      "name": "branch main e commit idênticos",
+      "ok": true,
+      "detail": "4fd72a1ea42d151d1c75528141b6fcfc02336052"
+    },
+    {
+      "name": "cabeçalho, ZIP, checkpoint e laboratório 1.6",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "sintaxe publicada",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "esquemas e funções 1.4/1.5 preservados",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado ast",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado entrada",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado saida",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado estado",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado transicao",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado saida-transicao",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado d20",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado saida-d20",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado salvaguarda-morte",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado saida-salvaguarda-morte",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado componente",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "salvaguarda publicada e saída",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "cancelamento publicado e saída",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "AST publicada e saída",
+      "ok": true,
+      "detail": null
+    }
+  ],
+  "passed": 18,
+  "failed": 0
+}
