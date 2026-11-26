@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "name": "contratos separados",
+      "ok": true
+    },
+    {
+      "name": "PF2e real após revisão",
+      "ok": true
+    },
+    {
+      "name": "parâmetro adicional rejeitado",
+      "ok": true
+    },
+    {
+      "name": "custo adulterado rejeitado",
+      "ok": true
+    },
+    {
+      "name": "outra publicação rejeitada",
+      "ok": true
+    },
+    {
+      "name": "sem casos bloqueado",
+      "ok": true
+    },
+    {
+      "name": "edição desconhecida bloqueada",
+      "ok": true
+    },
+    {
+      "name": "registro extensível",
+      "ok": true
+    }
+  ],
+  "pfReport": {
+    "version": "1.8.0",
+    "scope": {
+      "adapter": "pf2e-foundry",
+      "system": "pf2e",
+      "edition": "remaster",
+      "publication": "Pathfinder Player Core"
+    },
+    "records": 1,
+    "components": 1,
+    "tests": {
+      "total": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "pending": 1,
+    "status": "aprovado_no_escopo_testado",
+    "bloquear_importacao": true,
+    "homologacao": "bloqueada",
+    "limits": [
+      "Foundry PF2e em commit fixado; edição e publicação por metadado explícito.",
+      "Custo fixo de ações e fórmulas simples são componentes, não regras completas.",
+      "RuleElements não executados."
+    ]
+  }
+}

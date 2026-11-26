@@ -15,24 +15,16 @@
       "type": "object",
       "properties": {
         "adapter": {
-          "enum": [
-            "dnd5e-5etools",
-            "pf2e-foundry"
-          ]
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
         },
         "system": {
-          "enum": [
-            "dnd5e",
-            "pf2e"
-          ]
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
         },
         "edition": {
-          "enum": [
-            "5e-2024-revisada",
-            "remaster",
-            "legacy",
-            "nao_confirmada"
-          ]
+          "type": "string",
+          "minLength": 1
         },
         "publication": {
           "type": "string",
@@ -81,79 +73,7 @@
       "additionalProperties": false
     },
     "params": {
-      "oneOf": [
-        {
-          "type": "object",
-          "properties": {
-            "kind": {
-              "const": "multiplicador_forca"
-            },
-            "multiplier": {
-              "enum": [
-                7.5,
-                15,
-                30,
-                60,
-                120,
-                240
-              ]
-            }
-          },
-          "required": [
-            "kind",
-            "multiplier"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "kind": {
-              "const": "custo_acao_pf2e"
-            },
-            "cost": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 3
-            }
-          },
-          "required": [
-            "kind",
-            "cost"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "kind": {
-              "const": "dados_fixos_pf2e"
-            },
-            "count": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 100
-            },
-            "sides": {
-              "type": "integer",
-              "minimum": 2,
-              "maximum": 1000
-            },
-            "modifier": {
-              "type": "integer",
-              "minimum": -1000000,
-              "maximum": 1000000
-            }
-          },
-          "required": [
-            "kind",
-            "count",
-            "sides",
-            "modifier"
-          ],
-          "additionalProperties": false
-        }
-      ]
+      "type": "object"
     },
     "raw": {},
     "limits": {

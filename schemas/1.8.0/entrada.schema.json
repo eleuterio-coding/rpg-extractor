@@ -7,24 +7,16 @@
       "type": "object",
       "properties": {
         "adapter": {
-          "enum": [
-            "dnd5e-5etools",
-            "pf2e-foundry"
-          ]
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
         },
         "system": {
-          "enum": [
-            "dnd5e",
-            "pf2e"
-          ]
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
         },
         "edition": {
-          "enum": [
-            "5e-2024-revisada",
-            "remaster",
-            "legacy",
-            "nao_confirmada"
-          ]
+          "type": "string",
+          "minLength": 1
         },
         "publication": {
           "type": "string",

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.8.0/perfil-dnd5e-5etools.schema.json",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "multiplicador_forca"
+    },
+    "multiplier": {
+      "enum": [
+        7.5,
+        15,
+        30,
+        60,
+        120,
+        240
+      ]
+    }
+  },
+  "required": [
+    "kind",
+    "multiplier"
+  ],
+  "additionalProperties": false
+}

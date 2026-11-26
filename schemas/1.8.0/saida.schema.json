@@ -4,11 +4,8 @@
   "type": "object",
   "properties": {
     "kind": {
-      "enum": [
-        "multiplicador_forca",
-        "custo_acao_pf2e",
-        "dados_fixos_pf2e"
-      ]
+      "type": "string",
+      "minLength": 1
     },
     "value": {
       "type": "number"

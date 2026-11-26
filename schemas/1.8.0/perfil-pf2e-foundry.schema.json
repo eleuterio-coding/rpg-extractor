@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.8.0/perfil-pf2e-foundry.schema.json",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "custo_acao_pf2e"
+        },
+        "cost": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        }
+      },
+      "required": [
+        "kind",
+        "cost"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "dados_fixos_pf2e"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "sides": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 1000
+        },
+        "modifier": {
+          "type": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "required": [
+        "kind",
+        "count",
+        "sides",
+        "modifier"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}
