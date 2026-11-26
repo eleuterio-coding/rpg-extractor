@@ -1,0 +1,334 @@
+{
+  "version": "1.9.0",
+  "checks": [
+    {
+      "name": "núcleo 1.7 preservado",
+      "ok": true
+    },
+    {
+      "name": "sintaxe scripts",
+      "ok": true
+    },
+    {
+      "name": "SRI e contratos D&D",
+      "ok": true
+    },
+    {
+      "name": "SRI e contratos PF2e",
+      "ok": true
+    },
+    {
+      "name": "script alterado bloqueado",
+      "ok": true
+    },
+    {
+      "name": "contrato alterado bloqueado",
+      "ok": true
+    },
+    {
+      "name": "checkpoint D&D 1.8 reutilizável",
+      "ok": true
+    },
+    {
+      "name": "exportação 1.9 nos dois perfis",
+      "ok": true
+    },
+    {
+      "name": "snapshot local nos dois perfis",
+      "ok": true
+    }
+  ],
+  "dndIntegrity": {
+    "version": "1.9.0",
+    "profile": "dnd",
+    "status": "conferida",
+    "scripts": [
+      {
+        "path": "multi-core.js",
+        "expected": "b599cab48434344037bdc183c180c50a3143c73a54e3076727262f4b2b3c0cd2",
+        "actual": "b599cab48434344037bdc183c180c50a3143c73a54e3076727262f4b2b3c0cd2"
+      },
+      {
+        "path": "adapters/dnd5e.js",
+        "expected": "cd67f613947f637b3054681b9f4978ebf076673a4e1366295c5648b2b28b3b0a",
+        "actual": "cd67f613947f637b3054681b9f4978ebf076673a4e1366295c5648b2b28b3b0a"
+      },
+      {
+        "path": "homologation.js",
+        "expected": "328020149d1479827f15397f3124547bf3f0f5e6dbb162a6d52f34ba9cb9a965",
+        "actual": "328020149d1479827f15397f3124547bf3f0f5e6dbb162a6d52f34ba9cb9a965"
+      },
+      {
+        "path": "release-integrity.js",
+        "expected": "867f71f4be9b279ee34972988f48a9123195e19dfd1cb7f0df236bbba05e7555",
+        "actual": "867f71f4be9b279ee34972988f48a9123195e19dfd1cb7f0df236bbba05e7555"
+      }
+    ],
+    "legacyCore": {
+      "expected": "4e3ff48b460ff48e99ed227183c174560ae4d9b62b801c6420632da02187f9a7",
+      "actual": "4e3ff48b460ff48e99ed227183c174560ae4d9b62b801c6420632da02187f9a7"
+    },
+    "contracts": [
+      {
+        "path": "contracts/1.9.0/local-xphb-1.9.0.json",
+        "expected": "f8a4a348ae8989e425f2b3d7e09183699a40e08f38058e70f532ae1c2b7f781a",
+        "actual": "f8a4a348ae8989e425f2b3d7e09183699a40e08f38058e70f532ae1c2b7f781a",
+        "byteSha256": "3e9025412eb8c9f6ae832c3c7955b83acce465704b59cae0beca3ff9561af21e"
+      },
+      {
+        "path": "contracts/1.9.0/local-pf2e-player-core-1.9.0.json",
+        "expected": "1139f6be5ad11535fac000e4f6628e88b74d47fcfc894711c3997da6b507eb09",
+        "actual": "1139f6be5ad11535fac000e4f6628e88b74d47fcfc894711c3997da6b507eb09",
+        "byteSha256": "50cd3b233f9e6c3670ef8e55c303f92f70cb83a8f7ef9b253b302bacfbe6ad87"
+      }
+    ],
+    "schemas": [
+      {
+        "path": "schemas/1.9.0/contrato.schema.json",
+        "expected": "4c78a92ef7edf1d86e8cb7f8c1dff2ab9f487e3f18008f66b104aa84cba23040",
+        "actual": "4c78a92ef7edf1d86e8cb7f8c1dff2ab9f487e3f18008f66b104aa84cba23040",
+        "byteSha256": "1298090db15e36d9b892f2c8fc5e436f6bdd9ce72489eccc40a701453a9361a8"
+      },
+      {
+        "path": "schemas/1.9.0/candidato.schema.json",
+        "expected": "a551761445ac29cedd520c2a9c837bf4d8ba18c831dcf88aba4b4057c885dddf",
+        "actual": "a551761445ac29cedd520c2a9c837bf4d8ba18c831dcf88aba4b4057c885dddf",
+        "byteSha256": "a793e383aa61f66fb77eff90e1fc4a3d40f5cfc7018ec68ff63c2d65c0ad1236"
+      },
+      {
+        "path": "schemas/1.9.0/snapshot.schema.json",
+        "expected": "079c07b795aed287727112a1a9cac8e717722ef284e9af5ddcb0bf4289792616",
+        "actual": "079c07b795aed287727112a1a9cac8e717722ef284e9af5ddcb0bf4289792616",
+        "byteSha256": "fdb02c6487ff0df8a444792ba93369a70327f115f908425802ae4e29bf0f19a7"
+      },
+      {
+        "path": "schemas/1.9.0/registro.schema.json",
+        "expected": "216851dd37ffeae12301ae9b28ec69872c841cdb1257c07a34b02fe4e9407a4b",
+        "actual": "216851dd37ffeae12301ae9b28ec69872c841cdb1257c07a34b02fe4e9407a4b",
+        "byteSha256": "26528e21d9ce27fbee40a0906a781046fbe2ccda74ca386d1cb9b59694649272"
+      },
+      {
+        "path": "schemas/1.9.0/componente.schema.json",
+        "expected": "78b0c2012a70611c534af9c8926814652593e18a3506689860a663d761fb7a60",
+        "actual": "78b0c2012a70611c534af9c8926814652593e18a3506689860a663d761fb7a60",
+        "byteSha256": "934493c1f491959cefadb039fdf5a9fa35c20c11fff0d362ac128acd94386306"
+      },
+      {
+        "path": "schemas/1.9.0/plano.schema.json",
+        "expected": "dfe1d86d08c321012b06980f3e26f53927ed3b27fd49ca738e63d497839edd5e",
+        "actual": "dfe1d86d08c321012b06980f3e26f53927ed3b27fd49ca738e63d497839edd5e",
+        "byteSha256": "e8dd14ca4f5bd1288e4f9e9a0fded9a56d9f8b6b4e3cc63504a9fdfb4b248fd2"
+      },
+      {
+        "path": "schemas/1.9.0/planoLinha.schema.json",
+        "expected": "5c78450bc9588ce9a0c23bea5ef589cd21dc564b4888e8cdea84cbf709eb9a2f",
+        "actual": "5c78450bc9588ce9a0c23bea5ef589cd21dc564b4888e8cdea84cbf709eb9a2f",
+        "byteSha256": "bd88aedbfcbecdf2e8f481079482a49b5365367f831026e5ac7fbcdd016ee1bb"
+      },
+      {
+        "path": "schemas/1.9.0/matriz.schema.json",
+        "expected": "45fed2a1811344b365b0323aa3b513bf02aeb2f4f3915efff7a2096e87ffa770",
+        "actual": "45fed2a1811344b365b0323aa3b513bf02aeb2f4f3915efff7a2096e87ffa770",
+        "byteSha256": "07788c8ba0fc1912a1b5adf2b4398050e421842966bf6e894941ff2c7e536c33"
+      },
+      {
+        "path": "schemas/1.9.0/relatorio.schema.json",
+        "expected": "1b95d41bbacab26cd5e5141cda9405a3d041e7c85cc792e3c3b41a4c992243ce",
+        "actual": "1b95d41bbacab26cd5e5141cda9405a3d041e7c85cc792e3c3b41a4c992243ce",
+        "byteSha256": "fd741337ec22fb91080c396385e4d37f35586a8a8dd277a3d19c17ea96a03a5a"
+      },
+      {
+        "path": "schemas/1.8.0/identidade.schema.json",
+        "expected": "aa3de1b9b90c100dc3943cf8025a1f96779bc084076bafe54e0fc7a4771d9acc",
+        "actual": "aa3de1b9b90c100dc3943cf8025a1f96779bc084076bafe54e0fc7a4771d9acc",
+        "byteSha256": "6625125a38a398e97d6934590c1a783d6bc3c6cfb51aca0fd8bd31399d55fa31"
+      },
+      {
+        "path": "schemas/1.8.0/componente.schema.json",
+        "expected": "b2a844d8866c8dfa8067af1de934970029a089767517845e0940e0f24a630fb8",
+        "actual": "b2a844d8866c8dfa8067af1de934970029a089767517845e0940e0f24a630fb8",
+        "byteSha256": "c189d0364741bd90e2fd2ebc6d9c63116672fe297da641686f5e12fec0078e67"
+      },
+      {
+        "path": "schemas/1.8.0/entrada.schema.json",
+        "expected": "9ff70009e7fe8625e177fa9384f03f8c571dab3decb9ad23aafac201fbb93908",
+        "actual": "9ff70009e7fe8625e177fa9384f03f8c571dab3decb9ad23aafac201fbb93908",
+        "byteSha256": "3e5c9ea655b7b12d67596ce6ed8009a0aba41bfbbde85972d3cfef397c55c0d0"
+      },
+      {
+        "path": "schemas/1.8.0/saida.schema.json",
+        "expected": "6f979776d9ca61792922f4dd18c3ea69aece221a2c084c93bebca8de51e39da2",
+        "actual": "6f979776d9ca61792922f4dd18c3ea69aece221a2c084c93bebca8de51e39da2",
+        "byteSha256": "b69e6529d90cfda00e26320b12ad36d65ffcaf922eae034ab6448b0c1144f28e"
+      },
+      {
+        "path": "schemas/1.8.0/caso.schema.json",
+        "expected": "6591e90e03ef748d563d67a67a8aa8540a0d2823785dfcd9088a68303ba64e6e",
+        "actual": "6591e90e03ef748d563d67a67a8aa8540a0d2823785dfcd9088a68303ba64e6e",
+        "byteSha256": "ac6b235db3e9cbe3ce2efc305778f4cc188a0e3a58fa913381b1a924d5c93e74"
+      },
+      {
+        "path": "schemas/1.8.0/relatorio.schema.json",
+        "expected": "1fa9b716b7adea5d76c9be2eb1b78f4b030cb0554ca17f477c9f182b19be5c1a",
+        "actual": "1fa9b716b7adea5d76c9be2eb1b78f4b030cb0554ca17f477c9f182b19be5c1a",
+        "byteSha256": "902493fe6c7e6bf986a1f1ad3bea23e5e88b739edc659790e32978f9f1900dc0"
+      },
+      {
+        "path": "schemas/1.8.0/perfil-dnd5e-5etools.schema.json",
+        "expected": "208568d350a4f5984269166a3782388be441b4dab95270076da15ff2c51218a4",
+        "actual": "208568d350a4f5984269166a3782388be441b4dab95270076da15ff2c51218a4",
+        "byteSha256": "6e2dc19da8ac321e1714f93e46ff9c3c3aebad2840a2cf8942e4fabdc1b9cf29"
+      }
+    ],
+    "errors": [],
+    "limits": "Verifica SRI, bytes relidos da própria origem e contratos canônicos carregados. Não é assinatura digital de editor, prova de segurança do navegador ou contrato oficial do Hub."
+  },
+  "pfIntegrity": {
+    "version": "1.9.0",
+    "profile": "pf2e",
+    "status": "conferida",
+    "scripts": [
+      {
+        "path": "multi-core.js",
+        "expected": "b599cab48434344037bdc183c180c50a3143c73a54e3076727262f4b2b3c0cd2",
+        "actual": "b599cab48434344037bdc183c180c50a3143c73a54e3076727262f4b2b3c0cd2"
+      },
+      {
+        "path": "adapters/pf2e.js",
+        "expected": "0e906fd66a6216b75b7c3446838477a131e3960a632b3f651076bb8ea672ad48",
+        "actual": "0e906fd66a6216b75b7c3446838477a131e3960a632b3f651076bb8ea672ad48"
+      },
+      {
+        "path": "homologation.js",
+        "expected": "328020149d1479827f15397f3124547bf3f0f5e6dbb162a6d52f34ba9cb9a965",
+        "actual": "328020149d1479827f15397f3124547bf3f0f5e6dbb162a6d52f34ba9cb9a965"
+      },
+      {
+        "path": "release-integrity.js",
+        "expected": "867f71f4be9b279ee34972988f48a9123195e19dfd1cb7f0df236bbba05e7555",
+        "actual": "867f71f4be9b279ee34972988f48a9123195e19dfd1cb7f0df236bbba05e7555"
+      },
+      {
+        "path": "pf2e-ui.js",
+        "expected": "ac8bbe8a3edc676684ba07eadeb0d6289c9e795a44e39494308f2a0161d78d0c",
+        "actual": "ac8bbe8a3edc676684ba07eadeb0d6289c9e795a44e39494308f2a0161d78d0c"
+      }
+    ],
+    "legacyCore": null,
+    "contracts": [
+      {
+        "path": "contracts/1.9.0/local-xphb-1.9.0.json",
+        "expected": "f8a4a348ae8989e425f2b3d7e09183699a40e08f38058e70f532ae1c2b7f781a",
+        "actual": "f8a4a348ae8989e425f2b3d7e09183699a40e08f38058e70f532ae1c2b7f781a",
+        "byteSha256": "3e9025412eb8c9f6ae832c3c7955b83acce465704b59cae0beca3ff9561af21e"
+      },
+      {
+        "path": "contracts/1.9.0/local-pf2e-player-core-1.9.0.json",
+        "expected": "1139f6be5ad11535fac000e4f6628e88b74d47fcfc894711c3997da6b507eb09",
+        "actual": "1139f6be5ad11535fac000e4f6628e88b74d47fcfc894711c3997da6b507eb09",
+        "byteSha256": "50cd3b233f9e6c3670ef8e55c303f92f70cb83a8f7ef9b253b302bacfbe6ad87"
+      }
+    ],
+    "schemas": [
+      {
+        "path": "schemas/1.9.0/contrato.schema.json",
+        "expected": "4c78a92ef7edf1d86e8cb7f8c1dff2ab9f487e3f18008f66b104aa84cba23040",
+        "actual": "4c78a92ef7edf1d86e8cb7f8c1dff2ab9f487e3f18008f66b104aa84cba23040",
+        "byteSha256": "1298090db15e36d9b892f2c8fc5e436f6bdd9ce72489eccc40a701453a9361a8"
+      },
+      {
+        "path": "schemas/1.9.0/candidato.schema.json",
+        "expected": "a551761445ac29cedd520c2a9c837bf4d8ba18c831dcf88aba4b4057c885dddf",
+        "actual": "a551761445ac29cedd520c2a9c837bf4d8ba18c831dcf88aba4b4057c885dddf",
+        "byteSha256": "a793e383aa61f66fb77eff90e1fc4a3d40f5cfc7018ec68ff63c2d65c0ad1236"
+      },
+      {
+        "path": "schemas/1.9.0/snapshot.schema.json",
+        "expected": "079c07b795aed287727112a1a9cac8e717722ef284e9af5ddcb0bf4289792616",
+        "actual": "079c07b795aed287727112a1a9cac8e717722ef284e9af5ddcb0bf4289792616",
+        "byteSha256": "fdb02c6487ff0df8a444792ba93369a70327f115f908425802ae4e29bf0f19a7"
+      },
+      {
+        "path": "schemas/1.9.0/registro.schema.json",
+        "expected": "216851dd37ffeae12301ae9b28ec69872c841cdb1257c07a34b02fe4e9407a4b",
+        "actual": "216851dd37ffeae12301ae9b28ec69872c841cdb1257c07a34b02fe4e9407a4b",
+        "byteSha256": "26528e21d9ce27fbee40a0906a781046fbe2ccda74ca386d1cb9b59694649272"
+      },
+      {
+        "path": "schemas/1.9.0/componente.schema.json",
+        "expected": "78b0c2012a70611c534af9c8926814652593e18a3506689860a663d761fb7a60",
+        "actual": "78b0c2012a70611c534af9c8926814652593e18a3506689860a663d761fb7a60",
+        "byteSha256": "934493c1f491959cefadb039fdf5a9fa35c20c11fff0d362ac128acd94386306"
+      },
+      {
+        "path": "schemas/1.9.0/plano.schema.json",
+        "expected": "dfe1d86d08c321012b06980f3e26f53927ed3b27fd49ca738e63d497839edd5e",
+        "actual": "dfe1d86d08c321012b06980f3e26f53927ed3b27fd49ca738e63d497839edd5e",
+        "byteSha256": "e8dd14ca4f5bd1288e4f9e9a0fded9a56d9f8b6b4e3cc63504a9fdfb4b248fd2"
+      },
+      {
+        "path": "schemas/1.9.0/planoLinha.schema.json",
+        "expected": "5c78450bc9588ce9a0c23bea5ef589cd21dc564b4888e8cdea84cbf709eb9a2f",
+        "actual": "5c78450bc9588ce9a0c23bea5ef589cd21dc564b4888e8cdea84cbf709eb9a2f",
+        "byteSha256": "bd88aedbfcbecdf2e8f481079482a49b5365367f831026e5ac7fbcdd016ee1bb"
+      },
+      {
+        "path": "schemas/1.9.0/matriz.schema.json",
+        "expected": "45fed2a1811344b365b0323aa3b513bf02aeb2f4f3915efff7a2096e87ffa770",
+        "actual": "45fed2a1811344b365b0323aa3b513bf02aeb2f4f3915efff7a2096e87ffa770",
+        "byteSha256": "07788c8ba0fc1912a1b5adf2b4398050e421842966bf6e894941ff2c7e536c33"
+      },
+      {
+        "path": "schemas/1.9.0/relatorio.schema.json",
+        "expected": "1b95d41bbacab26cd5e5141cda9405a3d041e7c85cc792e3c3b41a4c992243ce",
+        "actual": "1b95d41bbacab26cd5e5141cda9405a3d041e7c85cc792e3c3b41a4c992243ce",
+        "byteSha256": "fd741337ec22fb91080c396385e4d37f35586a8a8dd277a3d19c17ea96a03a5a"
+      },
+      {
+        "path": "schemas/1.8.0/identidade.schema.json",
+        "expected": "aa3de1b9b90c100dc3943cf8025a1f96779bc084076bafe54e0fc7a4771d9acc",
+        "actual": "aa3de1b9b90c100dc3943cf8025a1f96779bc084076bafe54e0fc7a4771d9acc",
+        "byteSha256": "6625125a38a398e97d6934590c1a783d6bc3c6cfb51aca0fd8bd31399d55fa31"
+      },
+      {
+        "path": "schemas/1.8.0/componente.schema.json",
+        "expected": "b2a844d8866c8dfa8067af1de934970029a089767517845e0940e0f24a630fb8",
+        "actual": "b2a844d8866c8dfa8067af1de934970029a089767517845e0940e0f24a630fb8",
+        "byteSha256": "c189d0364741bd90e2fd2ebc6d9c63116672fe297da641686f5e12fec0078e67"
+      },
+      {
+        "path": "schemas/1.8.0/entrada.schema.json",
+        "expected": "9ff70009e7fe8625e177fa9384f03f8c571dab3decb9ad23aafac201fbb93908",
+        "actual": "9ff70009e7fe8625e177fa9384f03f8c571dab3decb9ad23aafac201fbb93908",
+        "byteSha256": "3e5c9ea655b7b12d67596ce6ed8009a0aba41bfbbde85972d3cfef397c55c0d0"
+      },
+      {
+        "path": "schemas/1.8.0/saida.schema.json",
+        "expected": "6f979776d9ca61792922f4dd18c3ea69aece221a2c084c93bebca8de51e39da2",
+        "actual": "6f979776d9ca61792922f4dd18c3ea69aece221a2c084c93bebca8de51e39da2",
+        "byteSha256": "b69e6529d90cfda00e26320b12ad36d65ffcaf922eae034ab6448b0c1144f28e"
+      },
+      {
+        "path": "schemas/1.8.0/caso.schema.json",
+        "expected": "6591e90e03ef748d563d67a67a8aa8540a0d2823785dfcd9088a68303ba64e6e",
+        "actual": "6591e90e03ef748d563d67a67a8aa8540a0d2823785dfcd9088a68303ba64e6e",
+        "byteSha256": "ac6b235db3e9cbe3ce2efc305778f4cc188a0e3a58fa913381b1a924d5c93e74"
+      },
+      {
+        "path": "schemas/1.8.0/relatorio.schema.json",
+        "expected": "1fa9b716b7adea5d76c9be2eb1b78f4b030cb0554ca17f477c9f182b19be5c1a",
+        "actual": "1fa9b716b7adea5d76c9be2eb1b78f4b030cb0554ca17f477c9f182b19be5c1a",
+        "byteSha256": "902493fe6c7e6bf986a1f1ad3bea23e5e88b739edc659790e32978f9f1900dc0"
+      },
+      {
+        "path": "schemas/1.8.0/perfil-pf2e-foundry.schema.json",
+        "expected": "278b00c4fef45fc80337634d79cfce225bebb1aa7a07ab32be2843e33082c83d",
+        "actual": "278b00c4fef45fc80337634d79cfce225bebb1aa7a07ab32be2843e33082c83d",
+        "byteSha256": "4599dde924800ba4ce53a7540e16b7f506079e1f8cd27be97a87a14a344c03e4"
+      }
+    ],
+    "errors": [],
+    "limits": "Verifica SRI, bytes relidos da própria origem e contratos canônicos carregados. Não é assinatura digital de editor, prova de segurança do navegador ou contrato oficial do Hub."
+  },
+  "limits": "Executor JS com DOM/fetch e SHA256 independentes simulados; sem execução real de navegador. O SRI será aplicado pelo navegador na publicação."
+}
