@@ -1,6 +1,6 @@
 /* Local release audit. SRI binds external scripts to page-declared digests; not a publisher signature. */
 (function(root){'use strict';const U=root.RPGMulti,H=root.RPGHomolog,CORE='4e3ff48b460ff48e99ed227183c174560ae4d9b62b801c6420632da02187f9a7',enc=new TextEncoder();
-const paths={dnd:['multi-core.js','adapters/dnd5e.js','homologation.js','release-integrity.js'],pf2e:['multi-core.js','adapters/pf2e.js','homologation.js','release-integrity.js','pf2e-ui.js']};
+const paths={dnd:['multi-core.js','adapters/dnd5e.js','homologation.js','rc1.js','release-integrity.js'],pf2e:['multi-core.js','adapters/pf2e.js','homologation.js','rc1.js','release-integrity.js','pf2e-ui.js']};
 const hex=b=>Array.from(b,x=>x.toString(16).padStart(2,'0')).join('');
 function sriHex(s){if(typeof s!=='string'||!/^sha256-[A-Za-z0-9+/]{43}=$/.test(s))throw Error('SRI ausente/inválido');return hex(Uint8Array.from(atob(s.slice(7)),c=>c.charCodeAt(0)));}
 async function verify(profile,doc,load){const scripts=[],contracts=[],schemas=[],errors=[];const getHash=b=>U.shaHex('SHA-256',b),decoder=new TextDecoder('utf-8',{fatal:true});const loaded=Array.from(doc.querySelectorAll('script[src]'));
@@ -11,9 +11,10 @@ async function verify(profile,doc,load){const scripts=[],contracts=[],schemas=[]
  for(const c of H.contracts)await compare('contracts/1.9.0/'+c.id+'.json',c,contracts);
  for(const [k,s] of Object.entries(H.schemas))await compare('schemas/1.9.0/'+k+'.schema.json',s,schemas);
  for(const [k,s] of Object.entries(U.schemas))await compare('schemas/1.8.0/'+k+'.schema.json',s,schemas);
- return {version:'1.9.0',profile,status:errors.length?'divergente':'conferida',scripts,legacyCore,contracts,schemas,errors,limits:'Verifica SRI, bytes relidos da própria origem e contratos canônicos carregados. Não é assinatura digital de editor, prova de segurança do navegador ou contrato oficial do Hub.'};}
+ for(const [k,s] of Object.entries(root.RPGRC1.schemas))await compare('schemas/2.0.0-rc.1/'+k+'.schema.json',s,schemas);
+ return {version:'1.9.0',rcVersion:'2.0.0-rc.1',profile,status:errors.length?'divergente':'conferida',scripts,legacyCore,contracts,schemas,errors,limits:'Verifica SRI, bytes relidos da própria origem e contratos canônicos carregados. Não é assinatura digital de editor, prova de segurança do navegador ou contrato oficial do Hub.'};}
 async function browser(profile){return verify(profile,document,async path=>{const r=await fetch('./'+path,{credentials:'omit',cache:'no-store',redirect:'error'});if(!r.ok)throw Error('HTTP '+r.status);return new Uint8Array(await r.arrayBuffer());});}
 async function readSnapshot(file){if(!file)return null;try{if(file.size>20*1024*1024)throw Error('Limite de 20 MiB');return JSON.parse(await file.text());}catch(e){return {invalidSnapshot:String(e.message||e)};}}
-async function seal(files){const hashes={};for(const [path,value] of files){if(Object.hasOwn(hashes,path))throw Error('Arquivo duplicado: '+path);hashes[path]=await U.shaHex('SHA-256',typeof value==='string'?enc.encode(value):value);}return {version:'1.9.0',algorithm:'SHA-256',files:hashes,scope:'Arquivos da revisão e schemas 1.9, excluindo o próprio selo.'};}
+async function seal(files){const hashes={};for(const [path,value] of files){if(Object.hasOwn(hashes,path))throw Error('Arquivo duplicado: '+path);hashes[path]=await U.shaHex('SHA-256',typeof value==='string'?enc.encode(value):value);}return {version:'1.9.0',algorithm:'SHA-256',files:hashes,scope:'Arquivos da revisão informada e respectivos schemas, excluindo o próprio selo.'};}
 root.RPGRelease19=Object.freeze({verify,browser,readSnapshot,seal});
 })(globalThis);

@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0-rc.1",
+  "checks": [
+    {
+      "name": "núcleo legado preservado",
+      "ok": true
+    },
+    {
+      "name": "scripts e SRI D&D",
+      "ok": true
+    },
+    {
+      "name": "scripts e SRI PF",
+      "ok": true
+    },
+    {
+      "name": "exportações 2.0 RC1",
+      "ok": true
+    },
+    {
+      "name": "snapshots separados",
+      "ok": true
+    },
+    {
+      "name": "schemas RC1 na integridade",
+      "ok": true
+    },
+    {
+      "name": "checkpoint 1.8 preservado",
+      "ok": true
+    },
+    {
+      "name": "sintaxe JS",
+      "ok": true
+    }
+  ],
+  "scriptHashes": {
+    "multi-core.js": "b599cab48434344037bdc183c180c50a3143c73a54e3076727262f4b2b3c0cd2",
+    "adapters/dnd5e.js": "cd67f613947f637b3054681b9f4978ebf076673a4e1366295c5648b2b28b3b0a",
+    "adapters/pf2e.js": "0e906fd66a6216b75b7c3446838477a131e3960a632b3f651076bb8ea672ad48",
+    "homologation.js": "328020149d1479827f15397f3124547bf3f0f5e6dbb162a6d52f34ba9cb9a965",
+    "rc1.js": "0b1b44404887bd15e5220bff996ebad023ffdf3220a242573817bb459d8df95b",
+    "release-integrity.js": "95e31706c54f9915e6f6607391224b9f3684f36f02c7de13704d79fd4205280b",
+    "pf2e-ui.js": "7cb2454f31c54d7bcbda6ab41e631f0ce19ba5a13c725e8d9364e8d1e0c4429d"
+  },
+  "limits": "Verificação sintática e estática em executor; não comprova fluxo completo no navegador."
+}
