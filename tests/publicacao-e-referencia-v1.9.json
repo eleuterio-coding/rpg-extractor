@@ -1,0 +1,47 @@
+{
+  "version": "1.9.0",
+  "implementation": "c4f44dfa17c777be364c2e4560ad04438e74259b",
+  "postPublication": {
+    "passed": 15,
+    "failed": 0,
+    "checks": [
+      "main e commit idênticos",
+      "SHA-256 do núcleo 1.7 preservado",
+      "SRI de index.html",
+      "SRI de pf2e.html",
+      "dois contratos publicados iguais aos carregados",
+      "nove schemas publicados iguais aos carregados"
+    ],
+    "indexBlob": "73fec9ad9d1a203ab40a8c8d64e599d6f12899ed",
+    "coreSha256": "4e3ff48b460ff48e99ed227183c174560ae4d9b62b801c6420632da02187f9a7"
+  },
+  "independentZipReview": {
+    "executor": "Python, inspeção local dos ZIPs 1.8 e dos brutos 1.3; não reexecução do JS 1.9",
+    "XPHB": {
+      "zipSha256": "0e050517af31ca1ec8b904fba73fe5ac075d352c5928589456180fe38384b21b",
+      "identities": 4351,
+      "newComponents": 10,
+      "oldMultisystemCases": 80,
+      "independentIsolationExpectations": 40,
+      "pending": 898,
+      "rawBlobsVerified": 543,
+      "sourceRecordsVerified": 4351,
+      "legacyComponents": 1135,
+      "legacyArithmeticAndInvalidCases": 4017,
+      "compoundProfiles": 2,
+      "projectedCandidatesExpected": 2446
+    },
+    "PF2E": {
+      "zipSha256": "99a129d869999cd21269269b658498f2b42d42acae10c7d7d4e058d8ed4d33de",
+      "identities": 27,
+      "newComponents": 21,
+      "oldMultisystemCases": 147,
+      "independentIsolationExpectations": 84,
+      "pending": 36,
+      "sourceRecordsVerified": 27,
+      "projectedCandidatesExpected": 48,
+      "correctedAdapterCasesExpected": 168
+    }
+  },
+  "limits": "Os resultados integrais 1.8 são referência independente para a nova exportação; ambiente local sem resolução DNS para raw.githubusercontent.com, portanto não houve replay integral do JavaScript 1.9. Sem contrato oficial Hub e sem qualquer gravação no destino."
+}
