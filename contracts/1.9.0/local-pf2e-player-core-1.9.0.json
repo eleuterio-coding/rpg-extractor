@@ -1,0 +1,17 @@
+{
+  "id": "local-pf2e-player-core-1.9.0",
+  "version": "1.9.0",
+  "scope": {
+    "adapter": "pf2e-foundry",
+    "system": "pf2e",
+    "edition": "remaster",
+    "publication": "Pathfinder Player Core"
+  },
+  "official": false,
+  "mode": "simulacao_local",
+  "allowedKinds": [
+    "registro_consultivo",
+    "componente_isolado"
+  ],
+  "bloquear_importacao": true
+}

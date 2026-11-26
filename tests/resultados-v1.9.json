@@ -1,0 +1,242 @@
+{
+  "version": "1.9.0",
+  "checks": [
+    {
+      "name": "PF2e: três componentes reais revisados",
+      "ok": true,
+      "detail": {
+        "version": "1.9.0",
+        "scope": {
+          "adapter": "pf2e-foundry",
+          "system": "pf2e",
+          "edition": "remaster",
+          "publication": "Pathfinder Player Core"
+        },
+        "records": 4,
+        "components": 3,
+        "passedComponents": 3,
+        "blockedComponents": 0,
+        "sourcePending": 5,
+        "sourceFailures": 0,
+        "releaseIntegrity": "conferida",
+        "reviewStatus": "aprovado_no_escopo_testado",
+        "official": false,
+        "integration": "bloqueada",
+        "bloquear_importacao": true,
+        "limits": [
+          "Estados individuais e escopos não certificam regras completas.",
+          "Prova local de correspondência com registros previamente verificados; não é auditoria externa do livro.",
+          "Perfis compostos permanecem fora de candidaturas à importação.",
+          "Sem contrato oficial Hub, sem API de destino, sem gravação."
+        ]
+      }
+    },
+    {
+      "name": "PF2e: isolamento com entradas válidas em três dimensões",
+      "ok": true,
+      "detail": {
+        "total": 23,
+        "passed": 23,
+        "failed": 0
+      }
+    },
+    {
+      "name": "reexecução adicional de isolamento",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "simulação vazia",
+      "ok": true,
+      "detail": {
+        "create": 7,
+        "unchanged": 0,
+        "conflict": 0,
+        "blocked": 0
+      }
+    },
+    {
+      "name": "idempotência",
+      "ok": true,
+      "detail": {
+        "create": 0,
+        "unchanged": 7,
+        "conflict": 0,
+        "blocked": 0
+      }
+    },
+    {
+      "name": "conflito bloqueado sem sobrescrita",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot duplicado bloqueado",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "snapshot de outra edição bloqueado",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "contrato não oficial e bloqueio permanente",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "componente adulterado bloqueado",
+      "ok": true,
+      "detail": {
+        "version": "1.9.0",
+        "scope": {
+          "adapter": "pf2e-foundry",
+          "system": "pf2e",
+          "edition": "remaster",
+          "publication": "Pathfinder Player Core"
+        },
+        "records": 4,
+        "components": 3,
+        "passedComponents": 2,
+        "blockedComponents": 1,
+        "sourcePending": 5,
+        "sourceFailures": 0,
+        "releaseIntegrity": "conferida",
+        "reviewStatus": "bloqueado",
+        "official": false,
+        "integration": "bloqueada",
+        "bloquear_importacao": true,
+        "limits": [
+          "Estados individuais e escopos não certificam regras completas.",
+          "Prova local de correspondência com registros previamente verificados; não é auditoria externa do livro.",
+          "Perfis compostos permanecem fora de candidaturas à importação.",
+          "Sem contrato oficial Hub, sem API de destino, sem gravação."
+        ]
+      }
+    },
+    {
+      "name": "integridade ausente bloqueia componentes",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "D&D: dez fórmulas e componentes legados revisados",
+      "ok": true,
+      "detail": {
+        "version": "1.9.0",
+        "scope": {
+          "adapter": "dnd5e-5etools",
+          "system": "dnd5e",
+          "edition": "5e-2024-revisada",
+          "publication": "XPHB"
+        },
+        "records": 506,
+        "components": 382,
+        "passedComponents": 381,
+        "blockedComponents": 1,
+        "sourcePending": 597,
+        "sourceFailures": 0,
+        "releaseIntegrity": "conferida",
+        "reviewStatus": "aprovado_no_escopo_testado",
+        "official": false,
+        "integration": "bloqueada",
+        "bloquear_importacao": true,
+        "limits": [
+          "Estados individuais e escopos não certificam regras completas.",
+          "Prova local de correspondência com registros previamente verificados; não é auditoria externa do livro.",
+          "Perfis compostos permanecem fora de candidaturas à importação.",
+          "Sem contrato oficial Hub, sem API de destino, sem gravação."
+        ]
+      }
+    },
+    {
+      "name": "D&D: regressão 1.7 executada",
+      "ok": true,
+      "detail": {
+        "total": 1568,
+        "passed": 1568,
+        "failed": 0,
+        "notExecuted": 0
+      }
+    },
+    {
+      "name": "schemas 1.8 não contaminados",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "relatório e exportação de homologação",
+      "ok": true,
+      "detail": null
+    }
+  ],
+  "passed": 15,
+  "failed": 0,
+  "pf": {
+    "version": "1.9.0",
+    "scope": {
+      "adapter": "pf2e-foundry",
+      "system": "pf2e",
+      "edition": "remaster",
+      "publication": "Pathfinder Player Core"
+    },
+    "records": 4,
+    "components": 3,
+    "passedComponents": 3,
+    "blockedComponents": 0,
+    "sourcePending": 5,
+    "sourceFailures": 0,
+    "releaseIntegrity": "conferida",
+    "reviewStatus": "aprovado_no_escopo_testado",
+    "official": false,
+    "integration": "bloqueada",
+    "bloquear_importacao": true,
+    "limits": [
+      "Estados individuais e escopos não certificam regras completas.",
+      "Prova local de correspondência com registros previamente verificados; não é auditoria externa do livro.",
+      "Perfis compostos permanecem fora de candidaturas à importação.",
+      "Sem contrato oficial Hub, sem API de destino, sem gravação."
+    ]
+  },
+  "pfOriginalCases": {
+    "total": 23,
+    "passed": 23,
+    "failed": 0
+  },
+  "pfIsolation": 12,
+  "dnd": {
+    "version": "1.9.0",
+    "scope": {
+      "adapter": "dnd5e-5etools",
+      "system": "dnd5e",
+      "edition": "5e-2024-revisada",
+      "publication": "XPHB"
+    },
+    "records": 506,
+    "components": 382,
+    "passedComponents": 381,
+    "blockedComponents": 1,
+    "sourcePending": 597,
+    "sourceFailures": 0,
+    "releaseIntegrity": "conferida",
+    "reviewStatus": "aprovado_no_escopo_testado",
+    "official": false,
+    "integration": "bloqueada",
+    "bloquear_importacao": true,
+    "limits": [
+      "Estados individuais e escopos não certificam regras completas.",
+      "Prova local de correspondência com registros previamente verificados; não é auditoria externa do livro.",
+      "Perfis compostos permanecem fora de candidaturas à importação.",
+      "Sem contrato oficial Hub, sem API de destino, sem gravação."
+    ]
+  },
+  "dndLegacyTests": {
+    "total": 1568,
+    "passed": 1568,
+    "failed": 0,
+    "notExecuted": 0
+  },
+  "dndLegacyComponents": 371,
+  "limits": "Dados reais via GitHub: cinco arquivos PF2e, dois XPHB. SHA256 independente em executor; não é browser integral. Contratos provisórios e sem acesso ao destino."
+}

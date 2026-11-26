@@ -1,0 +1,17 @@
+{
+  "id": "local-xphb-1.9.0",
+  "version": "1.9.0",
+  "scope": {
+    "adapter": "dnd5e-5etools",
+    "system": "dnd5e",
+    "edition": "5e-2024-revisada",
+    "publication": "XPHB"
+  },
+  "official": false,
+  "mode": "simulacao_local",
+  "allowedKinds": [
+    "registro_consultivo",
+    "componente_isolado"
+  ],
+  "bloquear_importacao": true
+}

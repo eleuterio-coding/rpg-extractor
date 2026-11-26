@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.9.0/matriz.schema.json",
+  "type": "object",
+  "properties": {
+    "scope": {
+      "type": "object",
+      "properties": {
+        "adapter": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
+        },
+        "system": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
+        },
+        "edition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publication": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "adapter",
+        "system",
+        "edition",
+        "publication"
+      ],
+      "additionalProperties": false
+    },
+    "records": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "components": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "passedComponents": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "contractId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "compatibility": {
+      "enum": [
+        "contrato_provisorio_local",
+        "sem_contrato_provisorio"
+      ]
+    },
+    "official": {
+      "const": false
+    },
+    "integration": {
+      "const": "bloqueada"
+    }
+  },
+  "required": [
+    "scope",
+    "records",
+    "components",
+    "passedComponents",
+    "contractId",
+    "compatibility",
+    "official",
+    "integration"
+  ],
+  "additionalProperties": false
+}

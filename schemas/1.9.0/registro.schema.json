@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.9.0/registro.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "adapter": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
+        },
+        "system": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
+        },
+        "edition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publication": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "adapter",
+        "system",
+        "edition",
+        "publication"
+      ],
+      "additionalProperties": false
+    },
+    "partition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceEvidence": {
+      "enum": [
+        "conferida",
+        "divergente"
+      ]
+    },
+    "state": {
+      "enum": [
+        "aprovado_no_escopo_testado",
+        "bloqueado",
+        "consultivo",
+        "nao_testado"
+      ]
+    },
+    "payloadSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "bloquear_importacao": {
+      "const": true
+    }
+  },
+  "required": [
+    "id",
+    "scope",
+    "partition",
+    "sourceEvidence",
+    "state",
+    "payloadSha256",
+    "reasons",
+    "bloquear_importacao"
+  ],
+  "additionalProperties": false
+}

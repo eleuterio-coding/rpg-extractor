@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/1.9.0/componente.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recordId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "adapter": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
+        },
+        "system": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
+        },
+        "edition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publication": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "adapter",
+        "system",
+        "edition",
+        "publication"
+      ],
+      "additionalProperties": false
+    },
+    "layer": {
+      "enum": [
+        "motor-1.6",
+        "multissistemas-1.8",
+        "perfil-1.6"
+      ]
+    },
+    "sourceEvidence": {
+      "enum": [
+        "conferida",
+        "divergente"
+      ]
+    },
+    "tests": {
+      "type": "object",
+      "properties": {
+        "passed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "positive": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "negative": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "isolation": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "passed",
+        "failed",
+        "positive",
+        "negative",
+        "isolation"
+      ],
+      "additionalProperties": false
+    },
+    "state": {
+      "enum": [
+        "aprovado_no_escopo_testado",
+        "bloqueado",
+        "consultivo",
+        "nao_testado"
+      ]
+    },
+    "payloadSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "bloquear_importacao": {
+      "const": true
+    }
+  },
+  "required": [
+    "id",
+    "recordId",
+    "scope",
+    "layer",
+    "sourceEvidence",
+    "tests",
+    "state",
+    "payloadSha256",
+    "reasons",
+    "bloquear_importacao"
+  ],
+  "additionalProperties": false
+}
