@@ -1,0 +1,81 @@
+{
+  "release": "02ec982cf49b61b886242314dca537b1f8dfc2a2",
+  "codeBlob": "3bb1d72bf054fa1600a7fe62538d303d2072af2f",
+  "checks": [
+    {
+      "name": "branch main e commit idênticos",
+      "ok": true,
+      "detail": "3bb1d72bf054fa1600a7fe62538d303d2072af2f"
+    },
+    {
+      "name": "núcleo das versões anteriores preservado literalmente",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "sintaxe publicada",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado caso",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado relatorio",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema publicado integridade",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "mapa de ASTs reconstruído coincide em tamanho e CRC32 com ZIP corrigido",
+      "ok": true,
+      "detail": {
+        "bytes": 17227,
+        "crc32": "b1880e6e"
+      }
+    },
+    {
+      "name": "formas reais distintas e multiplicidades",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "testes aritméticos de formas reais distintas",
+      "ok": true,
+      "detail": {
+        "passed": 542,
+        "total": 542,
+        "weightedOccurrences": 2882,
+        "failures": []
+      }
+    },
+    {
+      "name": "autotestes publicados",
+      "ok": true,
+      "detail": {
+        "total": 78,
+        "passed": 78,
+        "failed": 0,
+        "notExecuted": 0
+      }
+    }
+  ],
+  "passed": 10,
+  "failed": 0,
+  "zipReference": {
+    "sha256": "b1ddbc15ae09d8474d0c988d574845e55fdfb1742687d9b2816190ec98373fc4",
+    "distinctExpressions": 136,
+    "componentOccurrences": 1135,
+    "distinctArithmeticCases": 542,
+    "distinctPassed": 542,
+    "weightedOccurrences": 2882,
+    "astMapCRC32": "b1880e6e"
+  },
+  "limits": "Teste de formas distintas reconstruídas do ZIP, não replay integral de seus registros. CRC32 é uma conferência não criptográfica; SHA-256 do pacote identifica a origem. Não equivale à execução ponderada dos casos repetidos."
+}
