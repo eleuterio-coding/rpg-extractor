@@ -1,0 +1,13 @@
+{
+  "version": "1.8.0",
+  "checks": {
+    "coreIdentical": true,
+    "syntax": true,
+    "mainLink": true,
+    "pfLink": true,
+    "mainExport": true,
+    "pfExport": true,
+    "pfCheckpoint": true
+  },
+  "limits": "Verificação estática e sintática; fluxo de navegador ainda não executado."
+}
