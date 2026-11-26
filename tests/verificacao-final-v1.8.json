@@ -1,0 +1,91 @@
+{
+  "version": "1.8.0",
+  "testedBase": "23744b1116cd48e75a888b7f7d48a2d6a7ae67bd",
+  "checks": [
+    {
+      "name": "SHA-1 e SHA-256 do executor conferidos com abc",
+      "ok": true
+    },
+    {
+      "name": "núcleo 1.7 preservado byte a byte",
+      "ok": true
+    },
+    {
+      "name": "SHA-256 núcleo igual ao selo do ZIP 1.7",
+      "ok": true
+    },
+    {
+      "name": "sintaxe scripts",
+      "ok": true
+    },
+    {
+      "name": "árvores reais PF2e raiz-escopo recalculadas",
+      "ok": true,
+      "detail": {
+        "trees": 5,
+        "files": 30,
+        "root": "cb14e42130b2eba32cfe75d260bb3f205afd6cca"
+      }
+    },
+    {
+      "name": "cinco blobs PF2e SHA-1 e SHA-256 verificados",
+      "ok": true,
+      "detail": [
+        {
+          "path": "packs/pf2e/actions/basic/stride.json",
+          "sha": "4366e879c805d6666d8a75dbab325bbadbbafab6",
+          "sha256": "20a28ab9f7d0ba375044e9299c101b130ea613ce6c76606faad85a3fec77acfc"
+        },
+        {
+          "path": "packs/pf2e/actions/basic/aid.json",
+          "sha": "1de41baf52c53dbe8143cc2296dfdaaae0c16239",
+          "sha256": "682d31d94967cb310cafdf183aeac0c7bfcecc06462f1df59da1ee3ca61398ac"
+        },
+        {
+          "path": "packs/pf2e/actions/basic/release.json",
+          "sha": "ef8ab4b9e2b809035108330ab2bb0f333e950c15",
+          "sha256": "fb3ab1aaf5fb6ffe4495727cbc0cb236861f149f78dff4bc8589a68b3352eaba"
+        },
+        {
+          "path": "packs/pf2e/actions/basic/raise-a-shield.json",
+          "sha": "66368c28fdef2eba59680e6ccbaaae0c5e011333",
+          "sha256": "a6009ccb2100e993c4123ea825fd6e0eb26077b8e8883b17cba10d4b299ef772"
+        },
+        {
+          "path": "packs/pf2e/actions/basic/affix-a-fulu.json",
+          "sha": "ecb91c2126fc1c35b522e05114278ab40fd59879",
+          "sha256": "f07ef6875c6b59faa9e4686aaa68832001b570ed657c45f4ab2f822baed1faec"
+        }
+      ]
+    },
+    {
+      "name": "blob adulterado rejeitado",
+      "ok": true
+    },
+    {
+      "name": "4 ações Player Core e outra publicação excluída",
+      "ok": true
+    },
+    {
+      "name": "14 casos reais de ação aprovados",
+      "ok": true
+    },
+    {
+      "name": "32 nomes estáticos de exportação preservados",
+      "ok": true
+    },
+    {
+      "name": "link e exportação PF2e",
+      "ok": true
+    }
+  ],
+  "passed": 11,
+  "failed": 0,
+  "coreSha256": "4e3ff48b460ff48e99ed227183c174560ae4d9b62b801c6420632da02187f9a7",
+  "pfSource": {
+    "repo": "foundryvtt/pf2e",
+    "commit": "edd853bd51a735e60477ab9b56536e1b233dd804",
+    "tree": "cb14e42130b2eba32cfe75d260bb3f205afd6cca"
+  },
+  "limits": "Resultados da execução imediatamente anterior, que excedeu limite do conector antes da gravação. As quatro correções foram reaplicadas identicamente e sintaxe conferida. Não é execução de navegador nem download dos 30 blobs."
+}
