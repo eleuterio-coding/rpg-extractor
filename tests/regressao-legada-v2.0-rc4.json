@@ -1,0 +1,48 @@
+{
+  "version": "2.0.0-rc.4",
+  "testedCommit": "826fbcf98ed7e930ee42aa289132438fb12105be",
+  "math": {
+    "components": 1135,
+    "distinctExpressions": 136,
+    "distinctExecutions": 678,
+    "archiveEquivalentCases": 4017,
+    "errors": [],
+    "astSha256": "524ebc3d50328d3b2e5f9bcf73dd44303d273d533e9b40be5c5706441d249003",
+    "caseSha256": "4ed5c075964a5b561f1b7edd4d440d70bd4b86e808c867c142607e14b45f3d96",
+    "expectedAstSha256": "524ebc3d50328d3b2e5f9bcf73dd44303d273d533e9b40be5c5706441d249003",
+    "expectedCaseSha256": "4ed5c075964a5b561f1b7edd4d440d70bd4b86e808c867c142607e14b45f3d96",
+    "passed": true
+  },
+  "rc1": {
+    "total": 2038,
+    "passed": 2038,
+    "probability": 128,
+    "recharge": 21,
+    "profiles": [
+      {
+        "id": "xphb-d20",
+        "evidence": true,
+        "tests": 1704,
+        "passed": 1704,
+        "state": "aprovado_no_escopo_testado",
+        "bloquear_importacao": true
+      },
+      {
+        "id": "xphb-death-save",
+        "evidence": true,
+        "tests": 185,
+        "passed": 185,
+        "state": "aprovado_no_escopo_testado",
+        "bloquear_importacao": true
+      }
+    ],
+    "caseSha256": "dffcb7d5bc281e5d6b03d363bd548838d04b78a4b89fa0c4e396fdf42a8aa74a",
+    "expectedCaseSha256": "dffcb7d5bc281e5d6b03d363bd548838d04b78a4b89fa0c4e396fdf42a8aa74a",
+    "matches": true
+  },
+  "limits": [
+    "Arithmetic archive grouped by exact expression and multiplicity; all generated ASTs and normalized input/expected/output multiset compared to RC3 archive digest. Distinct cases actually evaluated once, not repeated per record.",
+    "RC1 cases replayed using archive probability/recharge identifiers and parameters; profile evidence read at pinned source. Source byte hashes not recalculated here.",
+    "Does not rerun full 1.7 source evidence and structural tests; offline acceptance script required."
+  ]
+}
