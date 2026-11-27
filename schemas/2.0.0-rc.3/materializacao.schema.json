@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "record": {
+      "type": "string",
+      "minLength": 1
+    },
+    "variant": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourcePointer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actionPointer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action": {
+      "type": "object"
+    },
+    "actionSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "bloquear_importacao": {
+      "const": true
+    }
+  },
+  "required": [
+    "record",
+    "variant",
+    "sourcePointer",
+    "actionPointer",
+    "action",
+    "actionSha256",
+    "bloquear_importacao"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.3/materializacao.schema.json"
+}

@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "component": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input": {},
+    "expected": {},
+    "actual": {},
+    "passed": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "component",
+    "input",
+    "expected",
+    "actual",
+    "passed"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.3/caso.schema.json"
+}

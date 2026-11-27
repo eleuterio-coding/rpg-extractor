@@ -1,0 +1,107 @@
+{
+  "results": [
+    {
+      "name": "valid RC2 reverse",
+      "passed": true
+    },
+    {
+      "name": "duplicate revision snapshot",
+      "passed": true
+    },
+    {
+      "name": "duplicate revision reverse with recomputed hash",
+      "passed": true
+    },
+    {
+      "name": "duplicate logical",
+      "passed": true
+    },
+    {
+      "name": "foreign scope",
+      "passed": true
+    },
+    {
+      "name": "wrong external hash",
+      "passed": true
+    },
+    {
+      "name": "absent external hash",
+      "passed": true
+    },
+    {
+      "name": "divergent current",
+      "passed": true
+    },
+    {
+      "name": "tampered plan",
+      "passed": true
+    },
+    {
+      "name": "historical revision reuse across identities",
+      "passed": true
+    },
+    {
+      "name": "duplicate operations",
+      "passed": true
+    },
+    {
+      "name": "manifest known vector and raw bytes",
+      "passed": true
+    },
+    {
+      "name": "manifest reject ../bad",
+      "passed": true
+    },
+    {
+      "name": "manifest reject /absolute",
+      "passed": true
+    },
+    {
+      "name": "manifest reject a//b",
+      "passed": true
+    },
+    {
+      "name": "manifest reject a/./b",
+      "passed": true
+    },
+    {
+      "name": "manifest reject proveniencia/hashes-sha256.json",
+      "passed": true
+    },
+    {
+      "name": "manifest duplicates",
+      "passed": true
+    },
+    {
+      "name": "controlled four variants plus cast",
+      "passed": true
+    },
+    {
+      "name": "all generated mechanical cases",
+      "passed": true
+    },
+    {
+      "name": "base immutable",
+      "passed": true
+    },
+    {
+      "name": "reject ambiguous Slam",
+      "passed": true
+    },
+    {
+      "name": "reject unsupported mode",
+      "passed": true
+    },
+    {
+      "name": "reject unpinned source",
+      "passed": true
+    }
+  ],
+  "mechanical": {
+    "total": 69,
+    "passed": 69
+  },
+  "fixture": "controlled variants and Cast text; real RC2 audit identities for reversal",
+  "base": "2d05f5cd51d525ff3ec52cbf158f306442e04b49",
+  "execution": "Actual JavaScript functions evaluated in V8 with SHA-256 harness verified against original RC2 SRI and standard vector; no browser or full source regression claimed."
+}
