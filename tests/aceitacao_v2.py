@@ -32,12 +32,12 @@ def audit(path):
         def j(n): return json.loads(z.read(n))
         def l(n): return [json.loads(x) for x in z.read(n).splitlines() if x.strip()]
         def load(n): return l(n) if n.endswith('.jsonl') else j(n)
-        m=j('manifesto.json'); version=m['version']; require(version in ('2.0.0-rc.3','2.0.0-rc.4'), 'unsupported export version')
+        m=j('manifesto.json'); version=m['version']; require(version in ('2.0.0-rc.3','2.0.0-rc.4','2.0.0'), 'unsupported export version')
         require(m['bloquear_importacao'] is True, 'official import not blocked')
         global_name='proveniencia/hashes-sha256.json'; global_seal=j(global_name)
         require(global_seal=={n:h for n,h in hashes.items() if n!=global_name}, 'global seal incomplete or divergent')
         seals=['homologacao/selo.json','rc1/selo.json','rc2/selo.json','rc3/selo.json']
-        if version.endswith('.4'): seals.append('rc4/selo.json')
+        if version in ('2.0.0-rc.4','2.0.0'): seals.append('rc4/selo.json')
         if 'multissistemas/integridade.json' in ns: seals.append('multissistemas/integridade.json')
         for p in seals:
             d=j(p); d=d.get('files',d)
@@ -68,7 +68,7 @@ def audit(path):
         for p in ('testes/casos.jsonl','multissistemas/testes.jsonl','homologacao/testes-isolamento.jsonl','rc1/testes.jsonl','rc2/testes.jsonl','rc3/testes.jsonl'):
             if p not in ns: continue
             a=l(p); require(all(x.get('status')=='aprovado' or x.get('passed') is True for x in a), f'failed or unexecuted: {p}'); cases[p]=len(a)
-        if version.endswith('.4'):
+        if version in ('2.0.0-rc.4','2.0.0'):
             d=j('rc4/diagnostico.json'); p=j('rc2/plano-migracao.json')
             require(d['planStatus']==p['status'] and d['errors']==p['errors'] and d['planSha256']==j('rc2/plano-sha256.json')['planSha256'], 'diagnostic differs from plan')
             require(d['projection']==('rc2/snapshot-projetado.json' in ns) and d['reversal']==('rc2/reversao.json' in ns),'diagnostic file flags differ')

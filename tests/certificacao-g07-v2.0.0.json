@@ -1,0 +1,81 @@
+{
+  "version": "2.0.0",
+  "baseCommit": "dd34e04f854d8007ab53fa2966c726da275b2ebf",
+  "decision": "approved_distribution_in_tested_scope",
+  "pagesArtifactSha256": "30fdcc2526a47ca3c17e15db6f8f7f02abcfd44c16da05b9ff333777927d4de3",
+  "packages": [
+    {
+      "profile": "dnd-conflict",
+      "sha256": "203c91a1fae00e787108f5b98dfd10f68c189bbdfa1d6d74065718d7c03babcf",
+      "files": 220,
+      "globalHashes": 219,
+      "seals": 6,
+      "schemaInstances": 45513,
+      "identities": 4351,
+      "components": 1259,
+      "cases": 8825,
+      "conflicts": 2
+    },
+    {
+      "profile": "pf2e-conflict",
+      "sha256": "c94e0c99d0c00c939f3c151dac34a4c4dd626e1cd8f37bc0940ce6fd0565d711",
+      "files": 94,
+      "globalHashes": 93,
+      "seals": 5,
+      "schemaInstances": 459,
+      "identities": 27,
+      "components": 27,
+      "cases": 319,
+      "conflicts": 1
+    },
+    {
+      "profile": "pf2e-normal",
+      "sha256": "30c4fee2485b26abfe2bef753fcbd92375030937bb41f68546aac773dac87bc9",
+      "files": 93,
+      "globalHashes": 92,
+      "seals": 5,
+      "schemaInstances": 458,
+      "identities": 27,
+      "components": 27,
+      "cases": 319,
+      "conflicts": 0
+    }
+  ],
+  "rc4Acceptance": {
+    "archivedCases": 9463,
+    "developmentChecks": 138,
+    "globalHashes": 404,
+    "schemaInstances": 46430,
+    "seals": 16,
+    "passed": true
+  },
+  "stableFormatFixtures": {
+    "archivedCases": 9463,
+    "developmentChecks": 138,
+    "passed": true,
+    "notBrowserExports": true
+  },
+  "testedFileSha256": {
+    "index.html": "99a69596aa81580716cf124bc6e940c519da50cd5e8d440c5230903aa3533e65",
+    "pf2e.html": "c8b53a5e387dc1ed4378ef681ee5492a4879568bddef60af8013eb0022a8328b",
+    "pf2e-ui.js": "ca9fde0d037b40528558d7855d99ad86ea8289aa6cf21dc2e64a6e3fda9cf8d0",
+    "tests/aceitacao_v2.py": "ab9897638fa71827f1e5f6759eeedf4bf081309e56b08313f7c184c30484fbe2"
+  },
+  "gates": {
+    "G01": "approved_in_declared_scope",
+    "G02": "approved_in_declared_scope",
+    "G03": "approved_in_declared_scope",
+    "G04": "approved_in_declared_scope",
+    "G05": "approved_in_declared_scope",
+    "G06": "approved_in_declared_scope",
+    "G07": "approved_in_declared_scope"
+  },
+  "limitations": [
+    "Independent review outside extractor, not human third-party audit.",
+    "Standalone diagnostic download not independently verified in real browser; diagnostic data independently checked inside ZIPs.",
+    "Local browser blocked; 2.0.0 fixtures are not fresh browser exports.",
+    "Migration evidence only for basic PF2e actions. No official Hub contract or plugin scripts."
+  ],
+  "official": false,
+  "bloquear_importacao": true
+}

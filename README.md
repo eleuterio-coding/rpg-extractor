@@ -112,3 +112,7 @@ Revisão 1.8: contratos de parâmetros agora residem nos adaptadores (`perfil-dn
 - Conflito entre revisão anterior e registro recebido, inclusive com outras pendências, retorna plano bloqueado com motivo e não interrompe a exportação. Erros de validação de projeção/replay são convertidos em bloqueio sem autorização. Protocolo RC2 e controles de reversão preservados.
 - Diagnóstico RC4 no ZIP e download JSON independente; manifesto e selos anteriores preservados. Nenhum componente mecânico novo.
 - Testes `node tests/rc4-stability.cjs` e `node tests/rc3-integrity.cjs`. Critérios de certificação em `CERTIFICACAO-2.0.md`; exportações integrais e testes de navegador ainda exigem evidência. Sem integração Hub/Firebase.
+
+## 2.0.0 — distribuição estável
+
+A revisão G07 aprovou a distribuição nos escopos XPHB e ações básicas PF2e delimitados em [CERTIFICACAO-2.0.md](CERTIFICACAO-2.0.md). A versão de manifesto da distribuição é `2.0.0`, com protocolos RC1–RC4, schemas e checkpoints anteriores preservados. Os ZIPs mantêm `nao-homologado` e o bloqueio incondicional de importação oficial. Aceitação integrada executada em Python e Node.js 22 sobre três ZIPs RC4 e sobre fixtures de compatibilidade 2.0.0. Não é certificação de regras integrais ou novos escopos.
