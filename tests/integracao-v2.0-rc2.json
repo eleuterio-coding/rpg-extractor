@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0-rc.2",
+  "checks": [
+    {
+      "name": "núcleo legado preservado",
+      "ok": true
+    },
+    {
+      "name": "SRI RC2 nas duas páginas",
+      "ok": true
+    },
+    {
+      "name": "verificação schemas RC2",
+      "ok": true
+    },
+    {
+      "name": "reversão antiga desativada",
+      "ok": true
+    },
+    {
+      "name": "índice documental completo",
+      "ok": true
+    },
+    {
+      "name": "exportação RC2 nos dois perfis",
+      "ok": true
+    },
+    {
+      "name": "interface reversão local",
+      "ok": true
+    },
+    {
+      "name": "checkpoint preservado",
+      "ok": true
+    },
+    {
+      "name": "sintaxe JS",
+      "ok": true
+    }
+  ],
+  "scriptHashes": {
+    "multi-core.js": "b599cab48434344037bdc183c180c50a3143c73a54e3076727262f4b2b3c0cd2",
+    "adapters/dnd5e.js": "cd67f613947f637b3054681b9f4978ebf076673a4e1366295c5648b2b28b3b0a",
+    "adapters/pf2e.js": "0e906fd66a6216b75b7c3446838477a131e3960a632b3f651076bb8ea672ad48",
+    "homologation.js": "328020149d1479827f15397f3124547bf3f0f5e6dbb162a6d52f34ba9cb9a965",
+    "rc1.js": "74f8cd15e563a05bb37ce5dedd4db709c8b7a887fc5781c887198b3471cff9cf",
+    "rc2.js": "737829721ae6f53e40ce81c570f6db41014b7ef16f590f7c1023d32063837db1",
+    "release-integrity.js": "0ccf64eb883fd141b65e833038e74025bbe6101d78253ea959f578aa04d06ba4",
+    "rc2-ui.js": "1725962efb39f8be7c892a8ea1a143fc41c025a21890a56507e55c9e75a940bc",
+    "pf2e-ui.js": "11f0cbaad760d2632defddf0a465777935c5fea47fd33aad7aa872fdb4f79cb7"
+  },
+  "limits": "Verificações sintáticas/estáticas, sem execução no navegador. Testes mecânicos registrados em resultados-v2.0-rc2.json."
+}
