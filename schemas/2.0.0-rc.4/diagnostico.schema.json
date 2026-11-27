@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.4/diagnostico.schema.json",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": "2.0.0-rc.4"
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "adapter": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
+        },
+        "system": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
+        },
+        "edition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publication": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "adapter",
+        "system",
+        "edition",
+        "publication"
+      ],
+      "additionalProperties": false
+    },
+    "planSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "planStatus": {
+      "enum": [
+        "simulado",
+        "bloqueado"
+      ]
+    },
+    "snapshotInput": {
+      "enum": [
+        "ausente",
+        "valido",
+        "invalido"
+      ]
+    },
+    "operations": {
+      "type": "object",
+      "properties": {
+        "criar": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "inalterado": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nova_revisao": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "conflito": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "bloqueado": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "criar",
+        "inalterado",
+        "nova_revisao",
+        "conflito",
+        "bloqueado"
+      ],
+      "additionalProperties": false
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "projection": {
+      "type": "boolean"
+    },
+    "reversal": {
+      "type": "boolean"
+    },
+    "releaseIntegrity": {
+      "enum": [
+        "conferida",
+        "divergente",
+        "nao_conferida"
+      ]
+    },
+    "certification": {
+      "const": "pendente_auditoria_externa"
+    },
+    "official": {
+      "const": false
+    },
+    "bloquear_importacao": {
+      "const": true
+    }
+  },
+  "required": [
+    "version",
+    "scope",
+    "planSha256",
+    "planStatus",
+    "snapshotInput",
+    "operations",
+    "errors",
+    "projection",
+    "reversal",
+    "releaseIntegrity",
+    "certification",
+    "official",
+    "bloquear_importacao"
+  ],
+  "additionalProperties": false
+}

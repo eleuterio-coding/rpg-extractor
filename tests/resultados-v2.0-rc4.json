@@ -1,0 +1,215 @@
+{
+  "version": "2.0.0-rc.4",
+  "base": "b9d67bfa98d22b3a25ce0566800e98dd200533f4",
+  "execution": "Published RC3 source plus staged RC4 changes executed in V8; SHA-256 harness verified against known vector and RC3 source digest.",
+  "stability": {
+    "results": [
+      {
+        "name": "valid creation",
+        "passed": true
+      },
+      {
+        "name": "valid unchanged and reversible",
+        "passed": true
+      },
+      {
+        "name": "audit collision returned blocked instead of throwing",
+        "passed": true
+      },
+      {
+        "name": "previous unchanged",
+        "passed": true
+      },
+      {
+        "name": "blocked plan digest",
+        "passed": true
+      },
+      {
+        "name": "collision also diagnosed with dependency gate",
+        "passed": true
+      },
+      {
+        "name": "incoming cross-owner revisions",
+        "passed": true
+      },
+      {
+        "name": "malformed snapshot blocked with diagnostic",
+        "passed": true
+      },
+      {
+        "name": "malformed file sentinel",
+        "passed": true
+      },
+      {
+        "name": "foreign scope",
+        "passed": true
+      },
+      {
+        "name": "incoming stale alias",
+        "passed": true
+      },
+      {
+        "name": "semantic content conflict preserved",
+        "passed": true
+      },
+      {
+        "name": "valid new revision",
+        "passed": true
+      },
+      {
+        "name": "reverse rejected wrong hash",
+        "passed": true
+      },
+      {
+        "name": "reverse rejected blocked plan",
+        "passed": true
+      },
+      {
+        "name": "diagnosis distinguishes valid input from conflict",
+        "passed": true
+      },
+      {
+        "name": "diagnosis flags invalid input",
+        "passed": true
+      },
+      {
+        "name": "valid diagnosis retains reversal",
+        "passed": true
+      },
+      {
+        "name": "diagnosis rejects blocked projection",
+        "passed": true
+      },
+      {
+        "name": "diagnosis rejects blocked authorization",
+        "passed": true
+      },
+      {
+        "name": "diagnosis rejects wrong digest",
+        "passed": true
+      },
+      {
+        "name": "diagnostic files covered by global seal",
+        "passed": true
+      }
+    ],
+    "total": 22,
+    "passed": 22
+  },
+  "rc3": {
+    "results": [
+      {
+        "name": "valid RC2 reverse",
+        "passed": true
+      },
+      {
+        "name": "duplicate revision snapshot",
+        "passed": true
+      },
+      {
+        "name": "duplicate revision reverse with recomputed hash",
+        "passed": true
+      },
+      {
+        "name": "duplicate logical",
+        "passed": true
+      },
+      {
+        "name": "foreign scope",
+        "passed": true
+      },
+      {
+        "name": "wrong external hash",
+        "passed": true
+      },
+      {
+        "name": "absent external hash",
+        "passed": true
+      },
+      {
+        "name": "divergent current",
+        "passed": true
+      },
+      {
+        "name": "tampered plan",
+        "passed": true
+      },
+      {
+        "name": "historical revision reuse across identities",
+        "passed": true
+      },
+      {
+        "name": "duplicate operations",
+        "passed": true
+      },
+      {
+        "name": "manifest known vector and raw bytes",
+        "passed": true
+      },
+      {
+        "name": "manifest reject ../bad",
+        "passed": true
+      },
+      {
+        "name": "manifest reject /absolute",
+        "passed": true
+      },
+      {
+        "name": "manifest reject a//b",
+        "passed": true
+      },
+      {
+        "name": "manifest reject a/./b",
+        "passed": true
+      },
+      {
+        "name": "manifest reject proveniencia/hashes-sha256.json",
+        "passed": true
+      },
+      {
+        "name": "manifest duplicates",
+        "passed": true
+      },
+      {
+        "name": "controlled four variants plus cast",
+        "passed": true
+      },
+      {
+        "name": "all generated mechanical cases",
+        "passed": true
+      },
+      {
+        "name": "base immutable",
+        "passed": true
+      },
+      {
+        "name": "reject ambiguous Slam",
+        "passed": true
+      },
+      {
+        "name": "reject unsupported mode",
+        "passed": true
+      },
+      {
+        "name": "reject unpinned source",
+        "passed": true
+      }
+    ],
+    "mechanical": {
+      "total": 69,
+      "passed": 69
+    },
+    "fixture": "controlled variants and Cast text; real RC2 audit identities for reversal"
+  },
+  "legacyGeneric": {
+    "total": 78,
+    "passed": 78,
+    "failed": 0,
+    "notExecuted": 0
+  },
+  "legacyCoreSha256": "4e3ff48b460ff48e99ed227183c174560ae4d9b62b801c6420632da02187f9a7",
+  "limits": [
+    "No complete archive replay in this run.",
+    "No browser or official Hub contract."
+  ]
+}

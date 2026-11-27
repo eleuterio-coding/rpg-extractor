@@ -1,0 +1,32 @@
+/* Node 22: node tests/rc4-stability.cjs */
+const run=async(root)=>{const R1=root.RPGRC1,R2=root.RPGRC2,R3=root.RPGRC3,R4=root.RPGRC4,H=root.RPGHomolog,U=root.RPGMulti,results=[];const check=async(name,fn)=>{try{if(!await fn())throw Error('unexpected result');results.push({name,passed:true});}catch(e){results.push({name,passed:false,error:String(e.message||e)});}},reject=async(fn)=>{try{await fn();return false;}catch{return true;}};
+const s={adapter:'pf2e-foundry',system:'pf2e',edition:'remaster',publication:'Pathfinder Player Core'},id=n=>JSON.stringify([s.adapter,s.system,s.edition,s.publication,'foundryvtt/pf2e',['action',n]]),real={logicalId:id('HCl3pzVefiv9ZKQW'),revisionId:'7ad2866b43304ab6e56cb630a0188ddbebb7aa5926dd069354f8dab0ff024954',scope:s,kind:'action',contentSha256:'83c919646a2f28feda2c11e08b3e67cd22b97b5b74f9927e605b1b8ee563d0b3'},other={...real,logicalId:id('qm7xptMSozAinnPS'),revisionId:'18297fd9c17ce810febc6f084065712567c213c1c39f76a51255510409e418f5'},asRow=x=>({...x,partition:'principal',stability:'chave_nativa',localId:x.logicalId}),review={report:{reviewStatus:'aprovado_no_escopo_testado',scope:s}},plan=(items,previous=null,blocked=[])=>R2.plan({scope:s,ids:{rows:items.map(asRow),collisions:[]},blocked,review,previous}),safe=m=>m.plan.status==='bloqueado'&&m.projected===null&&m.authorization===null&&m.plan.afterSha256===null&&m.plan.official===false&&m.plan.bloquear_importacao===true,alias={...real,logicalId:other.logicalId};
+const first=await plan([real]),valid=await plan([real],first.projected);
+await check('valid creation',()=>first.plan.status==='simulado'&&first.projected.items.length===1);
+await check('valid unchanged and reversible',async()=>valid.plan.operations[0].operation==='inalterado'&&U.same(await R2.reverse(valid.projected,valid.authorization,valid.planSha256),first.projected));
+const previous=R2.makeSnapshot(s,[alias]),before=U.canonical(previous),conflict=await plan([real],previous);
+await check('audit collision returned blocked instead of throwing',()=>safe(conflict)&&conflict.plan.operations[0].operation==='conflito'&&conflict.plan.errors.some(x=>x.startsWith('CONFLITO_REVISAO:')));
+await check('previous unchanged',()=>U.canonical(previous)===before);
+await check('blocked plan digest',async()=>await H.digest(conflict.plan)===conflict.planSha256);
+const blocked=await plan([real],previous,[real.logicalId]);await check('collision also diagnosed with dependency gate',()=>safe(blocked)&&blocked.plan.operations[0].operation==='conflito');
+const incoming=await plan([real,alias]);await check('incoming cross-owner revisions',()=>safe(incoming)&&incoming.plan.operations.every(x=>x.operation==='conflito'));
+const malformed={...previous,items:[alias,alias]},invalid=await plan([real],malformed);
+await check('malformed snapshot blocked with diagnostic',()=>safe(invalid)&&invalid.plan.errors.some(x=>x.startsWith('SNAPSHOT_INVALIDO:')));
+const invalidFile=await plan([real],{invalidSnapshot:'JSON inválido'});await check('malformed file sentinel',()=>safe(invalidFile));
+const wrongScope=await plan([real],{...previous,scope:{...s,edition:'legacy'}});await check('foreign scope',()=>safe(wrongScope));
+const stale=await plan([real,{...other,revisionId:real.revisionId}],first.projected);await check('incoming stale alias',()=>safe(stale));
+const changed=await plan([{...real,revisionId:'1'.repeat(64),contentSha256:'2'.repeat(64)}],first.projected);await check('semantic content conflict preserved',()=>safe(changed)&&changed.plan.operations[0].operation==='conflito');
+const revision=await plan([{...real,revisionId:'3'.repeat(64)}],first.projected);await check('valid new revision',async()=>revision.plan.status==='simulado'&&revision.plan.operations[0].operation==='nova_revisao'&&U.same(await R2.reverse(revision.projected,revision.authorization,revision.planSha256),first.projected));
+await check('reverse rejected wrong hash',()=>reject(()=>R2.reverse(revision.projected,revision.authorization,'0'.repeat(64))));
+await check('reverse rejected blocked plan',()=>reject(()=>R2.reverse(first.projected,{...first.authorization,plan:conflict.plan,planSha256:conflict.planSha256},conflict.planSha256)));
+const d=await R4.diagnostic(conflict,previous,'conferida'),di=await R4.diagnostic(invalid,malformed,'conferida'),dv=await R4.diagnostic(valid,first.projected,'conferida');
+await check('diagnosis distinguishes valid input from conflict',()=>d.snapshotInput==='valido'&&d.operations.conflito===1&&!d.projection&&!d.reversal&&d.certification==='pendente_auditoria_externa');
+await check('diagnosis flags invalid input',()=>di.snapshotInput==='invalido'&&di.planStatus==='bloqueado');
+await check('valid diagnosis retains reversal',()=>dv.projection&&dv.reversal&&dv.planStatus==='simulado');
+await check('diagnosis rejects blocked projection',()=>reject(()=>R4.diagnostic({...conflict,projected:first.projected},previous,'conferida')));
+await check('diagnosis rejects blocked authorization',()=>reject(()=>R4.diagnostic({...conflict,authorization:first.authorization},previous,'conferida')));
+await check('diagnosis rejects wrong digest',()=>reject(()=>R4.diagnostic({...conflict,planSha256:'0'.repeat(64)},previous,'conferida')));
+await check('diagnostic files covered by global seal',async()=>{const files=R4.files(d),h=await R3.manifest(files);return files.length===2&&Object.keys(h).length===2&&files.every(([p])=>/^[0-9a-f]{64}$/.test(h[p]));});
+return {results,total:results.length,passed:results.filter(x=>x.passed).length};};
+if(typeof module!=='undefined')module.exports=run;
+if(typeof require!=='undefined'&&require.main===module){globalThis.crypto=require('node:crypto').webcrypto;for(const f of ['multi-core','homologation','rc1','rc2','rc3','rc4'])require('../'+f+'.js');run(globalThis).then(r=>{console.log(JSON.stringify(r,null,2));if(r.passed!==r.total)process.exitCode=1;}).catch(e=>{console.error(e);process.exitCode=1;});}

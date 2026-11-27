@@ -106,3 +106,9 @@ Revisão 1.8: contratos de parâmetros agora residem nos adaptadores (`perfil-dn
 - Manifesto SHA-256 global em ambos os adaptadores (exclui somente o próprio manifesto); selos anteriores preservados.
 - Camada RC3 separada: materialização restrita de Slam em quatro variantes Elemental Spirit e custos isolados de Cast a Spell (1–3 ações, recursos e pré-condições explícitos). Demais efeitos e migração permanecem bloqueados.
 - Índice RC3 agrega identidades de componentes RC1, RC2 e RC3, com localizadores estruturais condicionais. Testes em `tests/rc3-integrity.cjs`. Testes de navegador e exportações integrais ainda pendentes; sem contrato oficial Hub.
+
+## 2.0.0-rc.4 — estabilização (não homologada)
+
+- Conflito entre revisão anterior e registro recebido, inclusive com outras pendências, retorna plano bloqueado com motivo e não interrompe a exportação. Erros de validação de projeção/replay são convertidos em bloqueio sem autorização. Protocolo RC2 e controles de reversão preservados.
+- Diagnóstico RC4 no ZIP e download JSON independente; manifesto e selos anteriores preservados. Nenhum componente mecânico novo.
+- Testes `node tests/rc4-stability.cjs` e `node tests/rc3-integrity.cjs`. Critérios de certificação em `CERTIFICACAO-2.0.md`; exportações integrais e testes de navegador ainda exigem evidência. Sem integração Hub/Firebase.
