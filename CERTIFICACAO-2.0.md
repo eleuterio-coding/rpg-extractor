@@ -13,3 +13,13 @@ A certificação do extrator é restrita ao escopo de fontes e revisões auditad
 | G07 | Revisão externa das evidências e pendências; decisão explícita de homologação por escopo, nunca por contagens isoladas. |
 
 O bloqueio oficial do Hub permanece incondicional até existir contrato formal e testes oficiais independentes. Não flexibilizar dependências, perfis compostos, RuleElements, fontes, edições ou regras parciais para obter aprovação. Scripts oficiais do protocolo não estão disponíveis nesta implementação. A RC4 não promove componentes novos.
+
+## Comando de aceitação
+
+Com Python 3, `jsonschema` e Node.js 22, execute no clone atualizado:
+
+```sh
+python tests/aceitacao_v2.py XPHB-...zip PF2E-...zip --saida aceitacao.json
+```
+
+`--somente-estrutura` executa somente CRC, selos, schemas, índices e estados registrados; não equivale ao replay dos motores. Não publique os ZIPs de fontes no repositório. O script completo executa a suíte 1.7, 1.8, 1.9, RC1–RC3, vínculos documentais, índice, integridade e regressão RC4 no checkout. A parte estrutural foi executada nos dois ZIPs RC3; a execução conjunta via CLI Node ainda está pendente, embora os motores tenham sido reexecutados separadamente em escopos e grupos registrados nos relatórios. Falhas e divergências devem bloquear certificação; as evidências da RC4 no navegador permanecem pendentes.

@@ -1,0 +1,50 @@
+{
+  "packages": [
+    {
+      "file": "XPHB-2512db75eb48-v2.0-RC3-nao-homologado.zip",
+      "sha256": "de30cff74df09c74eb0f90cc5bde3760724d05a954f3d82b3024b4074a2be644",
+      "version": "2.0.0-rc.3",
+      "files": 216,
+      "globalHashes": 215,
+      "seals": 5,
+      "schemas": 67,
+      "schemaInstances": 45511,
+      "identities": 4351,
+      "components": 1259,
+      "recordedCases": {
+        "testes/casos.jsonl": 5238,
+        "multissistemas/testes.jsonl": 80,
+        "homologacao/testes-isolamento.jsonl": 40,
+        "rc1/testes.jsonl": 2038,
+        "rc2/testes.jsonl": 1381,
+        "rc3/testes.jsonl": 48
+      },
+      "structure": "passed",
+      "engineReplay": "not_executed"
+    },
+    {
+      "file": "PF2E-remaster-edd853bd51a7-v2.0-RC3-nao-homologado.zip",
+      "sha256": "3ea88365e2dac9bb2fd4f217414aece0636cf27a181e4d3ffe76a9a5d929add5",
+      "version": "2.0.0-rc.3",
+      "files": 90,
+      "globalHashes": 89,
+      "seals": 4,
+      "schemas": 37,
+      "schemaInstances": 457,
+      "identities": 27,
+      "components": 27,
+      "recordedCases": {
+        "multissistemas/testes.jsonl": 168,
+        "homologacao/testes-isolamento.jsonl": 84,
+        "rc1/testes.jsonl": 0,
+        "rc2/testes.jsonl": 46,
+        "rc3/testes.jsonl": 21
+      },
+      "structure": "passed",
+      "engineReplay": "not_executed"
+    }
+  ],
+  "certification": "external_review_required",
+  "official": false,
+  "bloquear_importacao": true
+}

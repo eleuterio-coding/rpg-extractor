@@ -1,0 +1,30 @@
+{
+  "legacyEvidence": {
+    "checked": 1135,
+    "passed": 1135,
+    "failures": []
+  },
+  "profileEvidence": {
+    "checked": 2,
+    "passed": 2
+  },
+  "baseline": {
+    "records": 4286,
+    "dependencies": 65,
+    "entities": 1679,
+    "facts": 6266,
+    "expressions": 1324,
+    "previousComponents": 1123,
+    "components": 1135,
+    "profiles": 2,
+    "references": 9951
+  },
+  "baselineMatches": true,
+  "schemasAndSeparation": true,
+  "uniqueRecords": true,
+  "uniqueComponents": true,
+  "priorComponentsPreserved": true,
+  "gatesPreserved": true,
+  "sourceSelectionRecordedValid": true,
+  "execution": "Independent Python pointer and manifest checks on actual RC3 XPHB ZIP; not source refetch."
+}
