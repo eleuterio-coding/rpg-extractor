@@ -1,0 +1,54 @@
+{
+  "version": "2.0.0-rc.2",
+  "checks": [
+    {
+      "name": "tabela interna real: dois vínculos",
+      "ok": true,
+      "detail": 2
+    },
+    {
+      "name": "99 componentes e 1381 testes D&D após reforço",
+      "ok": true,
+      "detail": {
+        "components": 99,
+        "total": 1381,
+        "failed": []
+      }
+    },
+    {
+      "name": "parâmetro de escalonamento adulterado recusado",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "reversão RC1 desativada",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "reação PF2e real após reforço",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "sintaxe e SRI atualizados",
+      "ok": true,
+      "detail": null
+    }
+  ],
+  "referencePredictions": {
+    "XPHB": {
+      "components": 99,
+      "tests": 1381,
+      "documentaryLinks": 332,
+      "remainingContextual": 4,
+      "priorBlockedRecords": 1033
+    },
+    "PF2E": {
+      "components": 5,
+      "tests": 46,
+      "priorBlockedRecords": 27
+    }
+  },
+  "limits": "Amostra de três arquivos XPHB (inclui classe Sorcerer) e uma ação PF2e. Expectativas integrais derivadas dos ZIPs RC1 em Python; não é exportação RC2 integral."
+}
