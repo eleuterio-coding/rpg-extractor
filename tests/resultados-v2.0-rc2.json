@@ -1,0 +1,138 @@
+{
+  "version": "2.0.0-rc.2",
+  "checks": [
+    {
+      "name": "PF2e cinco componentes reais, 46 testes",
+      "ok": true
+    },
+    {
+      "name": "regressão PF2e",
+      "ok": true
+    },
+    {
+      "name": "Stride histórico: ID estável, revisão distinta",
+      "ok": true
+    },
+    {
+      "name": "nova revisão real",
+      "ok": true
+    },
+    {
+      "name": "reversão exata",
+      "ok": true
+    },
+    {
+      "name": "anterior duplicado rejeitado",
+      "ok": true
+    },
+    {
+      "name": "anterior outro escopo rejeitado",
+      "ok": true
+    },
+    {
+      "name": "anterior adulterado rejeitado",
+      "ok": true
+    },
+    {
+      "name": "posterior adulterado rejeitado",
+      "ok": true
+    },
+    {
+      "name": "hash ausente/errado rejeitado",
+      "ok": true
+    },
+    {
+      "name": "plano alterado rejeitado pelo hash externo",
+      "ok": true
+    },
+    {
+      "name": "operações duplicadas rejeitadas",
+      "ok": true
+    },
+    {
+      "name": "estado atual divergente",
+      "ok": true
+    },
+    {
+      "name": "entrada duplicada bloqueada",
+      "ok": true
+    },
+    {
+      "name": "conflito semântico conservador",
+      "ok": true
+    },
+    {
+      "name": "70 escalonamentos e 29 ataques",
+      "ok": true
+    },
+    {
+      "name": "1381 casos D&D",
+      "ok": true
+    },
+    {
+      "name": "4 ataques _mod segregados",
+      "ok": true
+    },
+    {
+      "name": "vínculos documentais",
+      "ok": true
+    },
+    {
+      "name": "regressão 1.7",
+      "ok": true
+    }
+  ],
+  "passed": 20,
+  "failed": 0,
+  "sourceFiles": [
+    {
+      "path": "data/spells/spells-xphb.json",
+      "sha": "f826ff0502ab1b9f757f4a26e104179fcef1bd25"
+    },
+    {
+      "path": "data/bestiary/bestiary-xphb.json",
+      "sha": "b58c3f60c64044e7b68135cf281ef0d4a5ca82c4"
+    },
+    {
+      "path": "data/variantrules.json",
+      "sha": "50aa247b5e758c518956766f8475f2cf6d5e6532"
+    },
+    {
+      "path": "data/book/book-xphb.json",
+      "sha": "f7651e4c7d8b168bec68d11a01c4f6c807ba0eed"
+    }
+  ],
+  "realRevision": {
+    "before": {
+      "commit": "6084324d030e18ae3ebcf4ff9ec6206e302d0aaa",
+      "path": "packs/pf2e/actions/basic-actions/stride.json",
+      "sha": "4366e879c805d6666d8a75dbab325bbadbbafab6"
+    },
+    "after": {
+      "commit": "edd853bd51a735e60477ab9b56536e1b233dd804",
+      "path": "packs/pf2e/actions/basic/stride.json",
+      "sha": "4366e879c805d6666d8a75dbab325bbadbbafab6"
+    }
+  },
+  "dnd": {
+    "components": {
+      "escala_espaco": 70,
+      "bonus_ataque_magia": 29
+    },
+    "tests": 1381,
+    "documentary": 223,
+    "documentaryMissing": 0,
+    "rejected": 4,
+    "legacy": {
+      "total": 3041,
+      "passed": 3041,
+      "failed": 0,
+      "notExecuted": 0
+    }
+  },
+  "pf": {
+    "components": 5,
+    "tests": 46
+  },
+  "limits": "Resultados da execução imediatamente anterior (20/20), interrompida pelo limite do conector antes do commit. Código reconstruído para gravação e sintaxe/registro de schemas conferidos. Amostras reais, não replay integral; revisão real de Stride sem mudança de conteúdo, conflito testado com variante controlada."
+}

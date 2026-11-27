@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.2/vinculoDocumental.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target": {
+      "type": "string",
+      "minLength": 1
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pointer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceSha": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contentSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "state": {
+      "const": "alvo_documental_conferido"
+    },
+    "mechanicalImpact": {
+      "const": "nao_determinado"
+    }
+  },
+  "required": [
+    "id",
+    "record",
+    "target",
+    "path",
+    "pointer",
+    "sourceSha",
+    "contentSha256",
+    "state",
+    "mechanicalImpact"
+  ],
+  "additionalProperties": false
+}

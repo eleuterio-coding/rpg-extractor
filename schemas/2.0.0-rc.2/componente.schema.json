@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.2/componente.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "adapter": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
+        },
+        "system": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
+        },
+        "edition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publication": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "adapter",
+        "system",
+        "edition",
+        "publication"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "raw": {},
+    "params": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "escala_espaco"
+            },
+            "baseLevel": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9
+            },
+            "alternatives": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "count": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  "sides": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000
+                  },
+                  "constant": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000
+                  }
+                },
+                "required": [
+                  "count",
+                  "sides",
+                  "constant"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "increment": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "sides": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000
+                },
+                "constant": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                }
+              },
+              "required": [
+                "count",
+                "sides",
+                "constant"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "kind",
+            "baseLevel",
+            "alternatives",
+            "increment"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "bonus_ataque_magia"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "reacao_pf2e"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "acao_livre_pf2e"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "limits": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bloquear_importacao": {
+      "const": true
+    }
+  },
+  "required": [
+    "id",
+    "record",
+    "scope",
+    "evidence",
+    "raw",
+    "params",
+    "limits",
+    "bloquear_importacao"
+  ],
+  "additionalProperties": false
+}

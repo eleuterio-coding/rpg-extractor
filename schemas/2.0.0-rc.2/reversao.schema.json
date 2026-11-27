@@ -1,0 +1,492 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.2/reversao.schema.json",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": "2.0.0-rc.2"
+    },
+    "plan": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "2.0.0-rc.2"
+        },
+        "scope": {
+          "type": "object",
+          "properties": {
+            "adapter": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]{1,63}$"
+            },
+            "system": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]{1,63}$"
+            },
+            "edition": {
+              "type": "string",
+              "minLength": 1
+            },
+            "publication": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "adapter",
+            "system",
+            "edition",
+            "publication"
+          ],
+          "additionalProperties": false
+        },
+        "beforeSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "afterSha256": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.1/operacao.schema.json",
+            "type": "object",
+            "properties": {
+              "logicalId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "operation": {
+                "enum": [
+                  "criar",
+                  "inalterado",
+                  "nova_revisao",
+                  "conflito",
+                  "bloqueado"
+                ]
+              },
+              "before": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "logicalId": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "revisionId": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "scope": {
+                        "type": "object",
+                        "properties": {
+                          "adapter": {
+                            "type": "string",
+                            "pattern": "^[a-z][a-z0-9-]{1,63}$"
+                          },
+                          "system": {
+                            "type": "string",
+                            "pattern": "^[a-z][a-z0-9-]{1,63}$"
+                          },
+                          "edition": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "publication": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "adapter",
+                          "system",
+                          "edition",
+                          "publication"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "kind": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "contentSha256": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      }
+                    },
+                    "required": [
+                      "logicalId",
+                      "revisionId",
+                      "scope",
+                      "kind",
+                      "contentSha256"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "after": {
+                "type": "object",
+                "properties": {
+                  "logicalId": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "revisionId": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "scope": {
+                    "type": "object",
+                    "properties": {
+                      "adapter": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9-]{1,63}$"
+                      },
+                      "system": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9-]{1,63}$"
+                      },
+                      "edition": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "publication": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "adapter",
+                      "system",
+                      "edition",
+                      "publication"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "kind": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "contentSha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  }
+                },
+                "required": [
+                  "logicalId",
+                  "revisionId",
+                  "scope",
+                  "kind",
+                  "contentSha256"
+                ],
+                "additionalProperties": false
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "logicalId",
+              "operation",
+              "before",
+              "after",
+              "reason"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "status": {
+          "enum": [
+            "simulado",
+            "bloqueado"
+          ]
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "official": {
+          "const": false
+        },
+        "bloquear_importacao": {
+          "const": true
+        }
+      },
+      "required": [
+        "version",
+        "scope",
+        "beforeSha256",
+        "afterSha256",
+        "operations",
+        "status",
+        "errors",
+        "official",
+        "bloquear_importacao"
+      ],
+      "additionalProperties": false
+    },
+    "planSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "before": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "2.0.0-rc.2"
+        },
+        "scope": {
+          "type": "object",
+          "properties": {
+            "adapter": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]{1,63}$"
+            },
+            "system": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]{1,63}$"
+            },
+            "edition": {
+              "type": "string",
+              "minLength": 1
+            },
+            "publication": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "adapter",
+            "system",
+            "edition",
+            "publication"
+          ],
+          "additionalProperties": false
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.1/item.schema.json",
+            "type": "object",
+            "properties": {
+              "logicalId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "revisionId": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "scope": {
+                "type": "object",
+                "properties": {
+                  "adapter": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9-]{1,63}$"
+                  },
+                  "system": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9-]{1,63}$"
+                  },
+                  "edition": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "publication": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "adapter",
+                  "system",
+                  "edition",
+                  "publication"
+                ],
+                "additionalProperties": false
+              },
+              "kind": {
+                "type": "string",
+                "minLength": 1
+              },
+              "contentSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "logicalId",
+              "revisionId",
+              "scope",
+              "kind",
+              "contentSha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "official": {
+          "const": false
+        },
+        "bloquear_importacao": {
+          "const": true
+        }
+      },
+      "required": [
+        "version",
+        "scope",
+        "items",
+        "official",
+        "bloquear_importacao"
+      ],
+      "additionalProperties": false
+    },
+    "after": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "2.0.0-rc.2"
+        },
+        "scope": {
+          "type": "object",
+          "properties": {
+            "adapter": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]{1,63}$"
+            },
+            "system": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]{1,63}$"
+            },
+            "edition": {
+              "type": "string",
+              "minLength": 1
+            },
+            "publication": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "adapter",
+            "system",
+            "edition",
+            "publication"
+          ],
+          "additionalProperties": false
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://eleuterio-coding.github.io/rpg-extractor/schemas/2.0.0-rc.1/item.schema.json",
+            "type": "object",
+            "properties": {
+              "logicalId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "revisionId": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "scope": {
+                "type": "object",
+                "properties": {
+                  "adapter": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9-]{1,63}$"
+                  },
+                  "system": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9-]{1,63}$"
+                  },
+                  "edition": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "publication": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "adapter",
+                  "system",
+                  "edition",
+                  "publication"
+                ],
+                "additionalProperties": false
+              },
+              "kind": {
+                "type": "string",
+                "minLength": 1
+              },
+              "contentSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "logicalId",
+              "revisionId",
+              "scope",
+              "kind",
+              "contentSha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "official": {
+          "const": false
+        },
+        "bloquear_importacao": {
+          "const": true
+        }
+      },
+      "required": [
+        "version",
+        "scope",
+        "items",
+        "official",
+        "bloquear_importacao"
+      ],
+      "additionalProperties": false
+    },
+    "official": {
+      "const": false
+    },
+    "bloquear_importacao": {
+      "const": true
+    }
+  },
+  "required": [
+    "version",
+    "plan",
+    "planSha256",
+    "before",
+    "after",
+    "official",
+    "bloquear_importacao"
+  ],
+  "additionalProperties": false
+}
