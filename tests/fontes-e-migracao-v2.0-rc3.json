@@ -1,0 +1,77 @@
+{
+  "version": "2.0.0-rc.3",
+  "testedCommit": "ec43387d043431e4b0d8d5375f25e5e03188230b",
+  "sourceReplay": {
+    "dnd": {
+      "sourceFiles": 2,
+      "rows": 406,
+      "markers": 103,
+      "rc2": {
+        "components": 99,
+        "cases": 1381,
+        "passed": 1381,
+        "rejected": 4,
+        "materializations": 0
+      },
+      "rc3": {
+        "components": 4,
+        "cases": 48,
+        "passed": 48,
+        "rejected": 0,
+        "materializations": 4
+      }
+    },
+    "pf2e": {
+      "sourceFiles": 6,
+      "rc2": {
+        "components": 5,
+        "cases": 46,
+        "passed": 46,
+        "rejected": 0,
+        "materializations": 0
+      },
+      "rc3": {
+        "components": 1,
+        "cases": 21,
+        "passed": 21,
+        "rejected": 0,
+        "materializations": 0
+      }
+    }
+  },
+  "index": {
+    "dnd": {
+      "rows": 103,
+      "missing": 0,
+      "logicalCollisions": 0,
+      "revisionCollisions": 0
+    },
+    "pf2e": {
+      "rows": 6,
+      "missing": 0,
+      "logicalCollisions": 0,
+      "revisionCollisions": 0
+    }
+  },
+  "migration": {
+    "oldCommit": "b012a2bd66f2396c6eba239f0bcc614b8ae54327",
+    "newCommit": "faf08815d2df8173a19f1a6e5285a27a0c742cbc",
+    "path": "packs/pf2e/actions/basic/cast-a-spell.json",
+    "logicalStable": true,
+    "revisionChanged": true,
+    "contentChanged": true,
+    "descriptionChanged": true,
+    "publicationStable": true,
+    "first": "simulado",
+    "second": "bloqueado",
+    "operation": "conflito",
+    "projected": "absent",
+    "reversal": "absent"
+  },
+  "limitations": [
+    "Source records read at pinned commits; sourceSha values from RC2 ZIPs; raw Git blobs not independently rehashed.",
+    "Source-derived components only, not full legacy suite or browser export.",
+    "Semantic migration replay is record-level, not complete publications."
+  ],
+  "passed": true
+}
