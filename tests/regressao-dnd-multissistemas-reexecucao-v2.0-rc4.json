@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0-rc.4",
+  "testedCommit": "826fbcf98ed7e930ee42aa289132438fb12105be",
+  "multisystem": {
+    "total": 80,
+    "passed": 80,
+    "sha256": "769540adac96460247d417f85d136676cc1ddd963862eefc568470c4441c9271",
+    "expectedSha256": "769540adac96460247d417f85d136676cc1ddd963862eefc568470c4441c9271",
+    "matches": true
+  },
+  "isolation": {
+    "total": 40,
+    "passed": 40,
+    "sha256": "f790aa062ea73a77718ba340d6cae7d1b07d52d22e97a6358e2b705b828a0a1d",
+    "expectedSha256": "f790aa062ea73a77718ba340d6cae7d1b07d52d22e97a6358e2b705b828a0a1d",
+    "matches": true
+  },
+  "fix": "Replay fixture now extracts only the marker before the trailing unit, matching archived semantic offsets. No production code change.",
+  "passed": true
+}
