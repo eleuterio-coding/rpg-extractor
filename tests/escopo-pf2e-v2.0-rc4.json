@@ -1,0 +1,114 @@
+{
+  "version": "2.0.0-rc.4",
+  "testedCommit": "826fbcf98ed7e930ee42aa289132438fb12105be",
+  "scope": "packs/pf2e/actions/basic",
+  "commits": {
+    "old": "b012a2bd66f2396c6eba239f0bcc614b8ae54327",
+    "current": "edd853bd51a735e60477ab9b56536e1b233dd804"
+  },
+  "inventory": {
+    "oldFiles": 30,
+    "currentFiles": 30,
+    "selectedOld": 27,
+    "selectedCurrent": 27,
+    "excluded": 3,
+    "unchangedSelected": 23,
+    "changedSelected": 4,
+    "changedExcluded": 1,
+    "archiveIdentitySha256": "404c1c217f76bb7b7406b9d6795c293090cf4d3c257a9e40749aa1eb9dfe6b02",
+    "archiveIdentityMatches": true
+  },
+  "regression": {
+    "multi": {
+      "total": 168,
+      "passed": 168,
+      "sha256": "a37a600cf2899d2f960e34c2227d32027d26f6fe0433b7edba01fa99ffc04eb7",
+      "expectedSha256": "a37a600cf2899d2f960e34c2227d32027d26f6fe0433b7edba01fa99ffc04eb7",
+      "matches": true
+    },
+    "isolation": {
+      "total": 84,
+      "passed": 84,
+      "sha256": "27de6e4112f6c612c7fd925437efb2b4bcf233f2ab08cfb960013aab2292d580",
+      "expectedSha256": "27de6e4112f6c612c7fd925437efb2b4bcf233f2ab08cfb960013aab2292d580",
+      "matches": true
+    },
+    "rc2": {
+      "total": 46,
+      "passed": 46,
+      "sha256": "a5db0e1a1f19d380283a477732b69dc3069d23370489348e91362f6c76caad21",
+      "expectedSha256": "a5db0e1a1f19d380283a477732b69dc3069d23370489348e91362f6c76caad21",
+      "matches": true
+    },
+    "rc3": {
+      "total": 21,
+      "passed": 21,
+      "sha256": "72939967286827b0e259f791f44a3f623180b9813a38545a2079d500a1a01f64",
+      "expectedSha256": "72939967286827b0e259f791f44a3f623180b9813a38545a2079d500a1a01f64",
+      "matches": true
+    }
+  },
+  "componentIndex": {
+    "total": 27,
+    "missing": 0,
+    "collisions": 0,
+    "revisionCollisions": 0,
+    "sha256": "bbde9db58c2727510c6e1840325362307397cc39cddbdfc0d4798238ee419bc1",
+    "matches": true
+  },
+  "migration": {
+    "changed": [
+      {
+        "path": "packs/pf2e/actions/basic/avert-gaze.json",
+        "oldSha": "23529351b2bd79ff726728adabe9759678a5d58e",
+        "newSha": "5378a9b1708d6fedc71ff5396d27aa46faafa33f",
+        "contentChanged": true,
+        "oldContent": "dcde72a50e84db3a4dc3df72fa405662f457827441d028b4203b6e4559bd187e",
+        "newContent": "ade9278ed49fd9de0651dbf2b2eda7d72d3bbe31d12b28d504bf7f09b772bb8c"
+      },
+      {
+        "path": "packs/pf2e/actions/basic/cast-a-spell.json",
+        "oldSha": "955f956ebb1e47f583276fbac2ed7a647cd5f829",
+        "newSha": "e4a1e9b156c9f6b59693674ce466249f66477f34",
+        "contentChanged": true,
+        "oldContent": "b5d699cc7d196549233510f7019fb3f0a8a013d390a042bac3b99ecf3f512818",
+        "newContent": "518a8a6531f1bd177b4251504a77e20d6e95ab8aa273b1102bf16c822d888d0d"
+      },
+      {
+        "path": "packs/pf2e/actions/basic/grab-an-edge.json",
+        "oldSha": "3b3aeb94b75ee1b40c0140f80177b8e425aa3bdf",
+        "newSha": "b8c1ebbb132653e89ff590022450a8364dc36436",
+        "contentChanged": true,
+        "oldContent": "8706857a1d9d5b0f3bf1c3894403506ec659bcef141b102aaeee8fff70af08b7",
+        "newContent": "7e812fbf34a95ed03801e240efb835f5a4907263e10c4e7e2c5644d9c40452c6"
+      },
+      {
+        "path": "packs/pf2e/actions/basic/take-cover.json",
+        "oldSha": "f25f423a2daa491d82d17f9744eb4a137b4e7fee",
+        "newSha": "f2748a8597ec10163c4ca7149a459173dc0bd857",
+        "contentChanged": true,
+        "oldContent": "fddcbbcba762fa89414a5a2aee9d70af60391ab0849e509e41af4851728dde8d",
+        "newContent": "557082b86c91e1fc166721641c7419d14ed1c02b35d3ec67d3e1e7a14cca6ef4"
+      }
+    ],
+    "stable": 27,
+    "initial": "simulado",
+    "status": "bloqueado",
+    "operations": {
+      "criar": 0,
+      "inalterado": 0,
+      "nova_revisao": 23,
+      "conflito": 4,
+      "bloqueado": 0
+    },
+    "projected": false,
+    "authorization": false,
+    "unchangedSnapshotReversal": true
+  },
+  "limits": [
+    "Full directory inventory compared at both commits. Current selected record data hashes from audited RC3 archive; all 27 canonical record hashes independently checked locally. Only changed old source records and current Cast fetched; unchanged Git blob IDs reused. Not whole book.",
+    "Mechanical replay uses archive-derived field projection for 26 records, complete source record for Cast. Exact canonical case and index digests checked; not full source fidelity review.",
+    "Migration planning isolated from production dependency blockers; no authorization for Hub."
+  ],
+  "passed": true
+}
