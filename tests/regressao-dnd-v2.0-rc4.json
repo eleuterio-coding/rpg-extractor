@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0-rc.4",
+  "testedCommit": "826fbcf98ed7e930ee42aa289132438fb12105be",
+  "scope": "D&D XPHB — three pinned source files",
+  "rows": 407,
+  "rc2": {
+    "total": 1381,
+    "passed": 1381,
+    "sha256": "6ba8ac9bb723d00a94efb300a86da9ae0ae22ac7800fc1010297818569f53cfd",
+    "expectedSha256": "6ba8ac9bb723d00a94efb300a86da9ae0ae22ac7800fc1010297818569f53cfd",
+    "matches": true
+  },
+  "rc3": {
+    "total": 48,
+    "passed": 48,
+    "sha256": "a81fcafa5d16ba76602db1a14b7bc4abef4d6f0d03b89bbc0af95a48c6088425",
+    "expectedSha256": "a81fcafa5d16ba76602db1a14b7bc4abef4d6f0d03b89bbc0af95a48c6088425",
+    "matches": true
+  },
+  "multisystem": {
+    "total": 0,
+    "passed": 0,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expectedSha256": "769540adac96460247d417f85d136676cc1ddd963862eefc568470c4441c9271",
+    "matches": false
+  },
+  "isolation": {
+    "total": 0,
+    "passed": 0,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expectedSha256": "f790aa062ea73a77718ba340d6cae7d1b07d52d22e97a6358e2b705b828a0a1d",
+    "matches": false
+  },
+  "limits": [
+    "Pinned source records fetched directly; sourceSha values from previous audited archive, not byte-rehashed in this replay.",
+    "Multiset digest ignores serial case IDs but retains component IDs, input, expectations and actual results.",
+    "Not a complete source inventory or full 1.9 review of 4351 records."
+  ],
+  "passed": false
+}
